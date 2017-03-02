@@ -1,11 +1,11 @@
-module counter(val, r10, r205, a50, a150, a200, a500, valout);
+module Lab4counter(val, r10, r205, a50, a150, a200, a500, valout);
 input [13:0] val;
 input r10, r205, a50, a150, a200, a500;
 output [13:0] valout;
 
 reg [13:0] intVal;
 
-always @(r10, r205, posedge a50, posedge a150, posedge a200, posedge a500)
+always @(posedge r10, posedge r205, posedge a50, posedge a150, posedge a200, posedge a500)
 begin
 	if (r10)
 	begin
