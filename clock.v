@@ -1,10 +1,10 @@
-module clock(fastCLK, fastCounter, slowCLK);
+module Lab4clock(fastCLK, fastCounter, slowCLK);
 input fastCLK, fastCounter;
 output reg slowCLK;
 
 reg [50:0] counter;
 
-parameter oneKHz = 100000, sixtyTwoPFiveHZ = 1600000;
+//parameter oneKHz = 100000, sixtyTwoPFiveHZ = 1600000;
 
 initial
 begin
