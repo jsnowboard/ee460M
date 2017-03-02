@@ -13,7 +13,7 @@ end
 
 always @(posedge fastCLK)
 begin
-	if (counter >= oneKHz)
+	if (counter >= fastCounter)
 	begin
 		slowCLK <= ~slowCLK;
 		counter <= 0;
