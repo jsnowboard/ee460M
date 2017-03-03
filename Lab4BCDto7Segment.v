@@ -5,7 +5,7 @@ output reg [6:0] Val;
 output reg [3:0] Place;
 
 reg [6:0] seven [3:0];
-parameter select = {4'b0111, 4'b1011, 4'b1101, 4'b1110, 4'b1111};
+parameter [3:0] select [4:0] = '{4'b0111, 4'b1011, 4'b1101, 4'b1110, 4'b1111};
 integer i = 0;
 
 //A is MSB, G is LSB
@@ -65,19 +65,19 @@ endcase
 end
 
 always @(posedge OutClk)begin
-	i = i + 1;
 	Val = seven[i];
-	if(i >= 3)begin
-		i = 0;
-		end
-	else begin
-		i = i;
-		end
 	if(DisplayFlag)begin
 	Place = select[i];
 	end
 	else begin
 	Place = 4'b0000;
 	end
+	i = i + 1;
+	if(i >= 3)begin
+		i = 0;
+		end
+	else begin
+		i = i;
+		end
 end
 endmodule
