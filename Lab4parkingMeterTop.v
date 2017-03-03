@@ -7,12 +7,11 @@ wire [3:0] Thous, Hund, Tens, Ones;
 wire [13:0] countOut, decOut;
 
 //Multiple clocks
-Lab4clock c62hz(CLK, 1600000, out62Hz);
+//Lab4clock c62hz(CLK, 1600000, out62Hz);
+Lab4clock c62hz(CLK, 10000, out62Hz);
 Lab4clock c1hz (CLK, 100000000, out1f2Hz);
 Lab4clock c2hz (CLK, 50000000, out1Hz);
-//Lab4clock c62hz(CLK, 1, out62Hz);
-//Lab4clock c1hz (CLK, 10, out1f2Hz);
-//Lab4clock c2hz (CLK, 5, out1Hz);
+
 //Decounce and synch inputs
 Lab4Debouncer updebounce(UP, UPd, CLK);
 Lab4Debouncer downdebounce(DWN, DWNd, CLK);
