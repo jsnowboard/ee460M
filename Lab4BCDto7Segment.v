@@ -5,8 +5,14 @@ output reg [6:0] Val;
 output reg [3:0] Place;
 
 reg [6:0] seven [3:0];
-parameter [3:0] select [4:0] = '{4'b0111, 4'b1011, 4'b1101, 4'b1110, 4'b1111};
+//parameter [3:0] select [4:0] = '{4'b0111, 4'b1011, 4'b1101, 4'b1110, 4'b1111};
+wire [3:0] select [3:0];
 integer i = 0;
+
+assign select[0] = 4'b0111;
+assign select[1] = 4'b1011;
+assign select[2] = 4'b1101;
+assign select[3] = 4'b1110;
 
 //A is MSB, G is LSB
 always @(Thous, Hund, Tens, Ones)begin
@@ -73,7 +79,7 @@ always @(posedge OutClk)begin
 	Place = 4'b0000;
 	end
 	i = i + 1;
-	if(i >= 3)begin
+	if(i > 3)begin
 		i = 0;
 		end
 	else begin
