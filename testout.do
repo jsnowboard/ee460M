@@ -1,0 +1,13 @@
+add wave sim:/Lab4BCDTo7Segment/*
+force OutClk 0 0, 1 10 -repeat 20
+force DisplayFlag 1
+force Thous 0
+force Hund 0
+force Tens 0
+force Ones 0
+run 100
+force Thous 9
+force Hund 8
+force Tens 1
+force Ones 0
+run 100

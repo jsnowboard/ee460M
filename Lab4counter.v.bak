@@ -10,6 +10,12 @@ begin
 	intVal <= 0;
 end
 
+always @(val)
+begin
+	// val contains the decremented value
+	intVal <= val;
+end
+
 always @(posedge r10, posedge r205, posedge a50, posedge a150, posedge a200, posedge a500)
 begin
 	if (r10)

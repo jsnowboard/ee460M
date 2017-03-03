@@ -27,12 +27,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Lab4Debouncer
 
-} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Lab4counter
+-- Compiling module Lab4parkingMeterTop
 
 Top level modules:
-	Lab4counter
+	Lab4parkingMeterTop
 
 } {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
