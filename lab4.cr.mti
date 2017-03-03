@@ -1,15 +1,44 @@
-C:/Users/Jeremiah/Programming/EE-460M/counter.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/counter.v
+C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module counter
+-- Compiling module Lab4BinaryToBCD
 
 Top level modules:
-	counter
+	Lab4BinaryToBCD
 
-} {} {}} C:/Users/Jeremiah/Programming/EE-460M/decrementer.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/decrementer.v
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module decrementer
+-- Compiling module Lab4BCDTo7Segment
 
 Top level modules:
-	decrementer
+	Lab4BCDTo7Segment
+
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab4decrementer
+
+Top level modules:
+	Lab4decrementer
+
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab4DFF
+-- Compiling module Lab4Debouncer
+
+Top level modules:
+	Lab4Debouncer
+
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab4counter
+
+Top level modules:
+	Lab4counter
+
+} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab4clock
+
+Top level modules:
+	Lab4clock
 
 } {} {}}
