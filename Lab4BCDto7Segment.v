@@ -6,8 +6,7 @@ output reg [3:0] Place;
 
 reg [6:0] seven [3:0];
 parameter select = {4'b0111, 4'b1011, 4'b1101, 4'b1110, 4'b1111};
-integer i;
-
+integer i = 0;
 
 //A is MSB, G is LSB
 always @(Thous, Hund, Tens, Ones)begin
@@ -64,6 +63,7 @@ case (Ones)
 	default: seven[0] = 7'b1111111;
 endcase
 end
+
 always @(posedge OutClk)begin
 	i = i + 1;
 	Val = seven[i];
