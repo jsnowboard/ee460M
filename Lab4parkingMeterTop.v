@@ -5,7 +5,6 @@ output [6:0] seg;
 wire out1Hz, out1f2Hz, out62Hz, UPd, DWNd, LEFTd, RIGHTd, displayFlag;
 wire [3:0] Thous, Hund, Tens, Ones;
 wire [13:0] countOut, decOut;
-wire [3:0] an_temp;
 
 //Multiple clocks
 //Lab4clock c62hz(CLK, 1600000, out62Hz);
@@ -28,8 +27,7 @@ Lab4decrementer decrement(out1f2Hz, countOut, decOut, displayFlag);
 //Convert to BCD
 Lab4BinaryToBCD convert(countOut, Thous, Hund, Tens, Ones);
 //Convert to 7-Segment and Output
-Lab4BCDTo7Segment outToBoard(Thous, Hund, Tens, Ones, seg, an_temp, out62Hz, displayFlag);
-// Flash on for one clock pulse and off for the next
-Lab4Flasher flash(out1Hz, countOut, an_temp, an);
+Lab4BCDTo7Segment outToBoard(Thous, Hund, Tens, Ones, seg, an, out62Hz, displayFlag);
+
 endmodule
 

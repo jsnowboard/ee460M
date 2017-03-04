@@ -5,13 +5,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Lab4BinaryToBCD
 
-} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4Flasher.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4Flasher.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Lab4Flasher
-
-Top level modules:
-	Lab4Flasher
-
 } {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Lab4decrementer
@@ -33,13 +26,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	Lab4Debouncer
-
-} {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Lab4parkingMeterTop
-
-Top level modules:
-	Lab4parkingMeterTop
 
 } {} {}} C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

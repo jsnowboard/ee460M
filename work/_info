@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Jeremiah/Programming/EE-460M
 vLab4BCDTo7Segment
-!s110 1488596376
+!s110 1488599154
 !i10b 1
 !s100 bS]eIR5VQELSoCSDk7OmZ1
 ISgGSD@CX:L^k:OKIg4^K61
@@ -23,21 +23,21 @@ Z2 OP;L;10.4a;61
 r1
 !s85 0
 31
-!s108 1488596376.000000
+Z3 !s108 1488599154.000000
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v|
 !s101 -O0
 !i113 1
-Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 n@lab4@b@c@d@to7@segment
 vLab4BinaryToBCD
-Z4 !s110 1488596377
+Z5 !s110 1488599155
 !i10b 1
 !s100 W<0H[_Y<L`[[LWMCH@biZ3
 IY;8B7E`:`Ndj@^k]3kA2k3
 R1
 R0
-Z5 w1488497909
+Z6 w1488497909
 8C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v
 FC:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v
 L0 1
@@ -45,15 +45,15 @@ R2
 r1
 !s85 0
 31
-Z6 !s108 1488596377.000000
+R3
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4@binary@to@b@c@d
 vLab4clock
-Z7 !s110 1488596378
+Z7 !s110 1488599156
 !i10b 1
 !s100 fBzFMIUP]i7ITP[::P;311
 I8<EEK<>ggm4mX^3bGa8KN1
@@ -67,15 +67,15 @@ R2
 r1
 !s85 0
 31
-Z8 !s108 1488596378.000000
+Z8 !s108 1488599156.000000
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4clock
 vLab4counter
-R4
+R5
 !i10b 1
 !s100 FkHmE:`<ddEj<3IkQ>NaF3
 Ig6kz1@]_z@PGn2coleYZS3
@@ -89,12 +89,12 @@ R2
 r1
 !s85 0
 31
-R6
+Z10 !s108 1488599155.000000
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4counter
 vLab4Debouncer
 R7
@@ -103,23 +103,23 @@ R7
 I0kdHm@d]DK]kR`=oh]^eS0
 R1
 R0
-R5
-Z10 8C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
-Z11 FC:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
+R6
+Z11 8C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
+Z12 FC:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
 L0 10
 R2
 r1
 !s85 0
 31
-R8
-Z12 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
-Z13 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
+R10
+Z13 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4@debouncer
 vLab4decrementer
-R4
+R5
 !i10b 1
 !s100 :=BTf;11Y;2BkDZEHmZ0K0
 Ifne^m^SAbjZB4kJj0<gSC3
@@ -133,12 +133,12 @@ R2
 r1
 !s85 0
 31
-R6
+R10
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4decrementer
 vLab4DFF
 R7
@@ -147,20 +147,20 @@ R7
 I73`0gI[3X=SQ7lj>5e_9F3
 R1
 R0
-R5
-R10
+R6
 R11
+R12
 L0 1
 R2
 r1
 !s85 0
 31
-R8
-R12
+R10
 R13
+R14
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4@d@f@f
 vLab4Flasher
 !s110 1488596379
@@ -182,16 +182,16 @@ r1
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4Flasher.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4@flasher
 vLab4parkingMeterTop
 R7
 !i10b 1
-!s100 h<IS2_7]CF;Y]=PfdL<V23
-If?z@<gU;3_S7[IkGFX8fX2
+!s100 9WfO`mGOM4B9k:jX8_;Jf0
+IT>5;^XTC^ZkXI^jm3TAWd1
 R1
 R0
-R9
+w1488599152
 8C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v
 FC:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v
 L0 1
@@ -204,5 +204,5 @@ R8
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v|
 !s101 -O0
 !i113 1
-R3
+R4
 n@lab4parking@meter@top

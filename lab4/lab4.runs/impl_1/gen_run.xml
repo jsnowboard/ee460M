@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1488600227">
+  <File Type="OPT-DCP" Name="Lab4parkingMeterTop_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="ROUTE-DCP" Name="Lab4parkingMeterTop_routed.dcp"/>
+  <File Type="PA-TCL" Name="Lab4parkingMeterTop.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="Lab4parkingMeterTop_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Lab4parkingMeterTop_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="Lab4parkingMeterTop_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Lab4parkingMeterTop.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Lab4parkingMeterTop_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Lab4parkingMeterTop_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Lab4parkingMeterTop_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Lab4parkingMeterTop_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Lab4parkingMeterTop_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Lab4parkingMeterTop_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Lab4parkingMeterTop_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Lab4parkingMeterTop_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Lab4parkingMeterTop_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Lab4parkingMeterTop_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Lab4parkingMeterTop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Lab4parkingMeterTop_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Lab4parkingMeterTop_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Lab4parkingMeterTop_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Lab4parkingMeterTop_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="Lab4parkingMeterTop.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="Lab4parkingMeterTop_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="Lab4parkingMeterTop_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="Lab4parkingMeterTop_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Lab4parkingMeterTop_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Lab4parkingMeterTop_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Lab4parkingMeterTop_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="Lab4parkingMeterTop_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Lab4parkingMeterTop_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Lab4parkingMeterTop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Lab4parkingMeterTop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Lab4parkingMeterTop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Lab4parkingMeterTop_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Lab4parkingMeterTop_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Lab4parkingMeterTop_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Lab4parkingMeterTop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Lab4parkingMeterTop_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Lab4parkingMeterTop_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="Lab4parkingMeterTop.bit"/>
+  <File Type="BG-BIN" Name="Lab4parkingMeterTop.bin"/>
+  <File Type="BITSTR-MSK" Name="Lab4parkingMeterTop.msk"/>
+  <File Type="BITSTR-RBT" Name="Lab4parkingMeterTop.rbt"/>
+  <File Type="BITSTR-NKY" Name="Lab4parkingMeterTop.nky"/>
+  <File Type="BITSTR-BMM" Name="Lab4parkingMeterTop_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Lab4parkingMeterTop.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="Lab4parkingMeterTop.sysdef"/>
+  <File Type="BG-BGN" Name="Lab4parkingMeterTop.bgn"/>
+  <File Type="BG-DRC" Name="Lab4parkingMeterTop.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../Lab4Debouncer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4decrementer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4BCDto7Segment.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4BinaryToBCD.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4clock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Lab4parkingMeterTop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Lab4parkingMeterTop"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../Basys3_Master_lab4.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
