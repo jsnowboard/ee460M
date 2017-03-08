@@ -1,0 +1,92 @@
+module Lab4Controller(r10, r205, a50, a150, a200, a500, valout, slowCLK, displayFlag);
+input r10, r205, a50, a150, a200, a500, slowCLK;
+output reg displayFlag;
+output [13:0] valout;
+
+wire [13:0] decIn;
+reg [13:0] temp;
+reg plus50, plus150, plus200, plus500;
+
+initial begin 
+	temp = 0;
+	displayFlag = 1;
+	end
+
+always @(a50, a150, a200, a500, r205, r10)begin
+	if (a50)begin
+		plus50 = 1;
+		plus150 = 0;
+		plus200 = 0;
+		plus500 = 0;
+		end
+	else if (a150)begin
+		plus50 = 0;
+		plus150 = 1;
+		plus200 = 0;
+		plus500 = 0;
+		end	
+	else if (a200)begin
+		plus50 = 0;
+		plus150 = 0;
+		plus200 = 1;
+		plus500 = 0;
+		end
+	else if (a500)begin
+		plus50 = 0;
+		plus150 = 0;
+		plus200 = 0;
+		plus500 = 1;
+		end
+	else begin
+		plus50 = 0;
+		plus150 = 0;
+		plus200 = 0;
+		plus500 = 0;
+		end
+end
+
+always @(posedge slowCLK)begin
+
+	if(plus50)begin
+		temp = temp + 50;
+		end
+	else if (plus150)begin
+		temp = temp + 150;
+		end
+	else if (plus200)begin
+		temp = temp + 200;
+		end
+	else if (plus500)begin
+		temp = temp + 500;
+		end
+	else begin
+		temp = temp;
+		end
+if(r10)begin
+	temp = 10;
+	displayFlag = 1;
+	end
+else if (r205)begin
+	temp = 205;
+	displayFlag = 1;
+	end
+else begin
+	temp = (temp > 0) ? temp-1: temp;
+	if (temp <= 200)begin
+		if ((temp % 2) == 1)begin
+			displayFlag = 0;
+			end
+		else begin
+			displayFlag = 1;
+			end
+		end
+	else begin
+		displayFlag = 1;
+		end
+	end
+
+end
+
+assign valout = (temp > 9999) ? 9999 : temp; //Final output
+
+endmodule
