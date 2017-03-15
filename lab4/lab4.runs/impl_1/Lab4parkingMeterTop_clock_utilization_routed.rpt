@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date              : Fri Mar 03 22:06:43 2017
+| Date              : Tue Mar 07 20:57:33 2017
 | Host              : Jeremiah-PC running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file Lab4parkingMeterTop_clock_utilization_routed.rpt
 | Design            : Lab4parkingMeterTop
@@ -47,7 +47,7 @@ Table of Contents
 +-------+--------------------+---------------+------+-------+-------+
 | Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
 +-------+--------------------+---------------+------+-------+-------+
-|     1 | slowCLK_BUFG_inst  | slowCLK_BUFG  |   43 |    17 |    no |
+|     1 | slowCLK_BUFG_inst  | slowCLK_BUFG  |   43 |    16 |    no |
 |     2 | CLK_IBUF_BUFG_inst | CLK_IBUF_BUFG |   82 |    23 |    no |
 +-------+--------------------+---------------+------+-------+-------+
 
@@ -64,13 +64,13 @@ Table of Contents
 6. Details of Local Clocks
 --------------------------
 
-+-------+------------------+---------------------+--------------+-------+
-|       |                  |                     |   Num Loads  |       |
-+-------+------------------+---------------------+------+-------+-------+
-| Index | Local Clk Src    | Net Name            | BELs | Sites | Fixed |
-+-------+------------------+---------------------+------+-------+-------+
-|     1 | c1hz/slowCLK_reg | c1hz/decOut_reg[13] |   16 |     8 |    no |
-+-------+------------------+---------------------+------+-------+-------+
++-------+---------------------+-----------------------------+--------------+-------+
+|       |                     |                             |   Num Loads  |       |
++-------+---------------------+-----------------------------+------+-------+-------+
+| Index | Local Clk Src       | Net Name                    | BELs | Sites | Fixed |
++-------+---------------------+-----------------------------+------+-------+-------+
+|     1 | clocker/slowCLK_reg | clocker/displayFlag_reg_inv |   16 |     7 |    no |
++-------+---------------------+-----------------------------+------+-------+-------+
 
 
 7. Clock Regions : Key Resource Utilization
@@ -131,11 +131,11 @@ add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IBUF_BUFG}] [get_cells -filter { PR
 resize_pblock [get_pblocks {CLKAG_CLK_IBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
-# Clock net "c1hz/decOut_reg[13]" driven by instance "c1hz/slowCLK_reg" located at site "SLICE_X49Y0"
+# Clock net "clocker/displayFlag_reg_inv" driven by instance "clocker/slowCLK_reg" located at site "SLICE_X55Y5"
 #startgroup
-create_pblock {CLKAG_c1hz/decOut_reg[13]}
-add_cells_to_pblock [get_pblocks  {CLKAG_c1hz/decOut_reg[13]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="c1hz/decOut_reg[13]"}]]]
-resize_pblock [get_pblocks {CLKAG_c1hz/decOut_reg[13]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+create_pblock {CLKAG_clocker/displayFlag_reg_inv}
+add_cells_to_pblock [get_pblocks  {CLKAG_clocker/displayFlag_reg_inv}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clocker/displayFlag_reg_inv"}]]]
+resize_pblock [get_pblocks {CLKAG_clocker/displayFlag_reg_inv}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "slowCLK_BUFG" driven by instance "slowCLK_BUFG_inst" located at site "BUFGCTRL_X0Y1"

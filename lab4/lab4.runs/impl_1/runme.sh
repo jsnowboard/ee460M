@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.runs/impl_1'
+HD_PWD='C:/Users/Jeremiah/Programming/ee460M/lab4/lab4.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log Lab4parkingMeterTop.vdi -applog -m64 -messageDb vivado.pb -mode batch -source Lab4parkingMeterTop.tcl -notrace
 
 

@@ -13,25 +13,25 @@ Command: synth_design -top Lab4parkingMeterTop -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
-INFO: [Common 17-1223] The version limit for your license is '2017.02' and will expire in -3 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2017.02' and will expire in -7 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 265.637 ; gain = 93.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 265.820 ; gain = 93.906
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Lab4parkingMeterTop' [C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v:1]
-INFO: [Synth 8-638] synthesizing module 'Lab4clock' [C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4clock' (1#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4clock.v:1]
-INFO: [Synth 8-638] synthesizing module 'Lab4Debouncer' [C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v:10]
-INFO: [Synth 8-638] synthesizing module 'Lab4DFF' [C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4DFF' (2#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v:1]
-INFO: [Synth 8-226] default block is never used [C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v:27]
-INFO: [Synth 8-256] done synthesizing module 'Lab4Debouncer' (3#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v:10]
-INFO: [Synth 8-638] synthesizing module 'Lab4counter' [C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4counter' (4#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v:1]
-INFO: [Synth 8-638] synthesizing module 'Lab4decrementer' [C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4decrementer' (5#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v:1]
-INFO: [Synth 8-638] synthesizing module 'Lab4BinaryToBCD' [C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4BinaryToBCD' (6#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v:1]
-INFO: [Synth 8-638] synthesizing module 'Lab4BCDTo7Segment' [C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4parkingMeterTop' [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4clock' [C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4clock' (1#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4Debouncer' [C:/Users/Jeremiah/Programming/ee460M/Lab4Debouncer.v:10]
+INFO: [Synth 8-638] synthesizing module 'Lab4DFF' [C:/Users/Jeremiah/Programming/ee460M/Lab4Debouncer.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4DFF' (2#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4Debouncer.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jeremiah/Programming/ee460M/Lab4Debouncer.v:27]
+INFO: [Synth 8-256] done synthesizing module 'Lab4Debouncer' (3#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4Debouncer.v:10]
+INFO: [Synth 8-638] synthesizing module 'Lab4Controller' [C:/Users/Jeremiah/Programming/ee460M/Lab4Controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4decrementer' [C:/Users/Jeremiah/Programming/ee460M/Lab4decrementer.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4decrementer' (4#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4decrementer.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4Controller' (5#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4Controller.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4BinaryToBCD' [C:/Users/Jeremiah/Programming/ee460M/Lab4BinaryToBCD.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4BinaryToBCD' (6#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4BinaryToBCD.v:1]
+INFO: [Synth 8-638] synthesizing module 'Lab4BCDTo7Segment' [C:/Users/Jeremiah/Programming/ee460M/Lab4BCDto7Segment.v:1]
 	Parameter seven0 bound to: 7'b1000000 
 	Parameter seven1 bound to: 7'b1111001 
 	Parameter seven2 bound to: 7'b0100100 
@@ -43,10 +43,10 @@ INFO: [Synth 8-638] synthesizing module 'Lab4BCDTo7Segment' [C:/Users/Jeremiah/P
 	Parameter seven8 bound to: 7'b0000000 
 	Parameter seven9 bound to: 7'b0010000 
 	Parameter sevenD bound to: 7'b1111111 
-INFO: [Synth 8-256] done synthesizing module 'Lab4BCDTo7Segment' (7#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4BCDto7Segment.v:1]
-INFO: [Synth 8-256] done synthesizing module 'Lab4parkingMeterTop' (8#1) [C:/Users/Jeremiah/Programming/EE-460M/Lab4parkingMeterTop.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4BCDTo7Segment' (7#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4BCDto7Segment.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4parkingMeterTop' (8#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 302.813 ; gain = 130.645
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 302.984 ; gain = 131.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,42 +56,42 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 302.813 ; gain = 130.645
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 302.984 ; gain = 131.070
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Jeremiah/Programming/EE-460M/Basys3_Master_lab4.xdc]
-Finished Parsing XDC File [C:/Users/Jeremiah/Programming/EE-460M/Basys3_Master_lab4.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jeremiah/Programming/EE-460M/Basys3_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab4parkingMeterTop_propImpl.xdc].
+Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab4.xdc]
+Finished Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab4parkingMeterTop_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Lab4parkingMeterTop_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 586.336 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 587.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:56 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:56 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:56 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "displayFlag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:57 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -105,17 +105,16 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     14 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 5     
 	   2 Input      4 Bit       Adders := 29    
 	   2 Input      3 Bit       Adders := 4     
 +---Registers : 
 	               14 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 28    
+	                1 Bit    Registers := 27    
 +---Muxes : 
-	   2 Input     14 Bit        Muxes := 4     
-	   5 Input      9 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
 	  11 Input      7 Bit        Muxes := 3     
 	  14 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 24    
@@ -143,13 +142,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module Lab4counter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     14 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input     14 Bit        Muxes := 3     
-	   5 Input      9 Bit        Muxes := 1     
 Module Lab4decrementer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -160,6 +152,12 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     14 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module Lab4Controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
 Module Lab4BinaryToBCD 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -191,15 +189,15 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:57 . Memory (MB): peak = 586.336 ; gain = 414.168
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "decrement/displayFlag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cont/dec/displayFlag" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:58 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:58 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Parallel Reinference  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 587.109 ; gain = 415.195
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -210,9 +208,9 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:01:01 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:01:01 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 587.109 ; gain = 415.195
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -226,10 +224,811 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:16 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:36 ; elapsed = 00:01:46 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_0/i_179/O (BUF)
+     1: i_0/i_179/I (BUF)
+     2: i_0/i_178/O (GATE_2_2)
+     3: i_0/i_178/I0 (GATE_2_2)
+     4: i_0/i_177/O (GATE_2_14_OR)
+     5: i_0/i_177/I0 (GATE_2_14_OR)
+     6: i_0/i_176/O (GATE_2_2)
+     7: i_0/i_176/I1 (GATE_2_2)
+     8: i_0/i_174/O (GATE_2_14_OR)
+     9: i_0/i_174/I1 (GATE_2_14_OR)
+    10: i_0/i_173/O (GATE_2_2)
+    11: i_0/i_173/I1 (GATE_2_2)
+    12: i_0/i_13/O[0] (CARRY4)
+    13: i_0/i_13/S[0] (CARRY4)
+    14: i_0/i_179/O (BUF)
+Found timing loop:
+     0: i_0/i_100/O (INV)
+     1: i_0/i_100/I (INV)
+     2: i_0/i_99/O (GATE_2_2)
+     3: i_0/i_99/I1 (GATE_2_2)
+     4: i_0/i_98/O (GATE_2_2)
+     5: i_0/i_98/I0 (GATE_2_2)
+     6: i_0/i_97/O (GATE_2_14_OR)
+     7: i_0/i_97/I0 (GATE_2_14_OR)
+     8: i_0/i_96/O (GATE_2_2)
+     9: i_0/i_96/I1 (GATE_2_2)
+    10: i_0/i_95/O (GATE_2_8_AND)
+    11: i_0/i_95/I1 (GATE_2_8_AND)
+    12: i_0/i_5/O[0] (CARRY4)
+    13: i_0/i_5/S[0] (CARRY4)
+    14: i_0/i_100/O (INV)
+Found timing loop:
+     0: i_0/i_162/O (BUF)
+     1: i_0/i_162/I (BUF)
+     2: i_0/i_160/O (GATE_2_2)
+     3: i_0/i_160/I0 (GATE_2_2)
+     4: i_0/i_159/O (GATE_2_14_OR)
+     5: i_0/i_159/I0 (GATE_2_14_OR)
+     6: i_0/i_158/O (GATE_2_2)
+     7: i_0/i_158/I1 (GATE_2_2)
+     8: i_0/i_156/O (GATE_2_14_OR)
+     9: i_0/i_156/I1 (GATE_2_14_OR)
+    10: i_0/i_155/O (GATE_2_2)
+    11: i_0/i_155/I1 (GATE_2_2)
+    12: i_0/i_162/O (BUF)
+Found timing loop:
+     0: i_0/i_160/O (GATE_2_2)
+     1: i_0/i_160/I0 (GATE_2_2)
+     2: i_0/i_159/O (GATE_2_14_OR)
+     3: i_0/i_159/I1 (GATE_2_14_OR)
+     4: i_0/i_154/O (GATE_2_14_OR)
+     5: i_0/i_154/I0 (GATE_2_14_OR)
+     6: i_0/i_161/O (GATE_2_2)
+     7: i_0/i_161/I0 (GATE_2_2)
+     8: i_0/i_160/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_162/O (BUF)
+     1: i_0/i_162/I (BUF)
+     2: i_0/i_160/O (GATE_2_2)
+     3: i_0/i_160/I1 (GATE_2_2)
+     4: i_0/i_153/O (GATE_2_14_OR)
+     5: i_0/i_153/I1 (GATE_2_14_OR)
+     6: i_0/i_152/O (GATE_2_2)
+     7: i_0/i_152/I1 (GATE_2_2)
+     8: i_0/i_151/O (GATE_2_14_OR)
+     9: i_0/i_151/I0 (GATE_2_14_OR)
+    10: i_0/i_150/O (GATE_2_2)
+    11: i_0/i_150/I1 (GATE_2_2)
+    12: i_0/i_149/O (GATE_2_7_NAND)
+    13: i_0/i_149/I1 (GATE_2_7_NAND)
+    14: i_0/i_4/O[0] (CARRY4)
+    15: i_0/i_4/S[0] (CARRY4)
+    16: i_0/i_162/O (BUF)
+Found timing loop:
+     0: i_0/i_162/O (BUF)
+     1: i_0/i_162/I (BUF)
+     2: i_0/i_160/O (GATE_2_2)
+     3: i_0/i_160/I1 (GATE_2_2)
+     4: i_0/i_153/O (GATE_2_14_OR)
+     5: i_0/i_153/I1 (GATE_2_14_OR)
+     6: i_0/i_152/O (GATE_2_2)
+     7: i_0/i_152/I1 (GATE_2_2)
+     8: i_0/i_151/O (GATE_2_14_OR)
+     9: i_0/i_151/I1 (GATE_2_14_OR)
+    10: i_0/i_148/O (GATE_2_14_OR)
+    11: i_0/i_148/I1 (GATE_2_14_OR)
+    12: i_0/i_147/O (GATE_2_8_AND)
+    13: i_0/i_147/I1 (GATE_2_8_AND)
+    14: i_0/i_0/O[0] (CARRY4)
+    15: i_0/i_0/S[0] (CARRY4)
+    16: i_0/i_162/O (BUF)
+Found timing loop:
+     0: i_0/i_138/O (GATE_2_1_NOR)
+     1: i_0/i_138/I0 (GATE_2_1_NOR)
+     2: i_0/i_137/O (GATE_2_1_NOR)
+     3: i_0/i_137/I1 (GATE_2_1_NOR)
+     4: i_0/i_136/O (GATE_2_2)
+     5: i_0/i_136/I0 (GATE_2_2)
+     6: i_0/i_135/O (GATE_2_11)
+     7: i_0/i_135/I0 (GATE_2_11)
+     8: i_0/i_134/O (GATE_2_14_OR)
+     9: i_0/i_134/I1 (GATE_2_14_OR)
+    10: i_0/i_133/O (GATE_2_2)
+    11: i_0/i_133/I1 (GATE_2_2)
+    12: i_0/i_11/O[0] (CARRY4)
+    13: i_0/i_11/S[0] (CARRY4)
+    14: i_0/i_164/O (INV)
+    15: i_0/i_164/I (INV)
+    16: i_0/i_138/O (GATE_2_1_NOR)
+Found timing loop:
+     0: i_0/i_138/O (GATE_2_1_NOR)
+     1: i_0/i_138/I0 (GATE_2_1_NOR)
+     2: i_0/i_137/O (GATE_2_1_NOR)
+     3: i_0/i_137/I1 (GATE_2_1_NOR)
+     4: i_0/i_136/O (GATE_2_2)
+     5: i_0/i_136/I1 (GATE_2_2)
+     6: i_0/i_163/O (GATE_2_2)
+     7: i_0/i_163/I1 (GATE_2_2)
+     8: i_0/i_138/O (GATE_2_1_NOR)
+Found timing loop:
+     0: i_0/i_138/O (GATE_2_1_NOR)
+     1: i_0/i_138/I1 (GATE_2_1_NOR)
+     2: i_0/i_131/O (GATE_2_14_OR)
+     3: i_0/i_131/I1 (GATE_2_14_OR)
+     4: i_0/i_130/O (GATE_2_2)
+     5: i_0/i_130/I0 (GATE_2_2)
+     6: i_0/i_129/O (GATE_2_14_OR)
+     7: i_0/i_129/I1 (GATE_2_14_OR)
+     8: i_0/i_128/O (GATE_2_8_AND)
+     9: i_0/i_128/I1 (GATE_2_8_AND)
+    10: i_0/i_4/O[1] (CARRY4)
+    11: i_0/i_4/S[1] (CARRY4)
+    12: i_0/i_138/O (GATE_2_1_NOR)
+Found timing loop:
+     0: i_0/i_138/O (GATE_2_1_NOR)
+     1: i_0/i_138/I1 (GATE_2_1_NOR)
+     2: i_0/i_131/O (GATE_2_14_OR)
+     3: i_0/i_131/I1 (GATE_2_14_OR)
+     4: i_0/i_130/O (GATE_2_2)
+     5: i_0/i_130/I1 (GATE_2_2)
+     6: i_0/i_127/O (GATE_2_14_OR)
+     7: i_0/i_127/I1 (GATE_2_14_OR)
+     8: i_0/i_126/O (GATE_2_2)
+     9: i_0/i_126/I1 (GATE_2_2)
+    10: i_0/i_0/O[1] (CARRY4)
+    11: i_0/i_0/S[1] (CARRY4)
+    12: i_0/i_138/O (GATE_2_1_NOR)
+Found timing loop:
+     0: i_0/i_125/O (INV)
+     1: i_0/i_125/I (INV)
+     2: i_0/i_124/O (GATE_2_2)
+     3: i_0/i_124/I1 (GATE_2_2)
+     4: i_0/i_123/O (GATE_2_2)
+     5: i_0/i_123/I0 (GATE_2_2)
+     6: i_0/i_122/O (GATE_2_2)
+     7: i_0/i_122/I0 (GATE_2_2)
+     8: i_0/i_121/O (GATE_2_14_OR)
+     9: i_0/i_121/I1 (GATE_2_14_OR)
+    10: i_0/i_120/O (GATE_2_7_NAND)
+    11: i_0/i_120/I1 (GATE_2_7_NAND)
+    12: i_0/i_4/O[2] (CARRY4)
+    13: i_0/i_4/S[2] (CARRY4)
+    14: i_0/i_125/O (INV)
+Found timing loop:
+     0: i_0/i_124/O (GATE_2_2)
+     1: i_0/i_124/I1 (GATE_2_2)
+     2: i_0/i_123/O (GATE_2_2)
+     3: i_0/i_123/I0 (GATE_2_2)
+     4: i_0/i_122/O (GATE_2_2)
+     5: i_0/i_122/I1 (GATE_2_2)
+     6: i_0/i_119/O (GATE_2_14_OR)
+     7: i_0/i_119/I1 (GATE_2_14_OR)
+     8: i_0/i_118/O (GATE_2_8_AND)
+     9: i_0/i_118/I1 (GATE_2_8_AND)
+    10: i_0/i_0/O[2] (CARRY4)
+    11: i_0/i_0/S[2] (CARRY4)
+    12: i_0/i_146/O (BUF)
+    13: i_0/i_146/I (BUF)
+    14: i_0/i_124/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_125/O (INV)
+     1: i_0/i_125/I (INV)
+     2: i_0/i_124/O (GATE_2_2)
+     3: i_0/i_124/I1 (GATE_2_2)
+     4: i_0/i_123/O (GATE_2_2)
+     5: i_0/i_123/I1 (GATE_2_2)
+     6: i_0/i_117/O (GATE_2_2)
+     7: i_0/i_117/I0 (GATE_2_2)
+     8: i_0/i_116/Z (MUX1)
+     9: i_0/i_116/B (MUX1)
+    10: i_0/i_115/Z (MUX1)
+    11: i_0/i_115/A (MUX1)
+    12: i_0/i_11/O[1] (CARRY4)
+    13: i_0/i_11/S[1] (CARRY4)
+    14: i_0/i_125/O (INV)
+Found timing loop:
+     0: i_0/i_144/O (BUF)
+     1: i_0/i_144/I (BUF)
+     2: i_0/i_143/O (INV)
+     3: i_0/i_143/I (INV)
+     4: i_0/i_113/O (GATE_2_2)
+     5: i_0/i_113/I1 (GATE_2_2)
+     6: i_0/i_112/O (GATE_2_2)
+     7: i_0/i_112/I0 (GATE_2_2)
+     8: i_0/i_111/O (GATE_2_14_OR)
+     9: i_0/i_111/I0 (GATE_2_14_OR)
+    10: i_0/i_110/O (GATE_2_2)
+    11: i_0/i_110/I0 (GATE_2_2)
+    12: i_0/i_109/Z (MUX1)
+    13: i_0/i_109/A (MUX1)
+    14: i_0/i_11/O[2] (CARRY4)
+    15: i_0/i_11/S[2] (CARRY4)
+    16: i_0/i_144/O (BUF)
+Found timing loop:
+     0: i_0/i_113/O (GATE_2_2)
+     1: i_0/i_113/I1 (GATE_2_2)
+     2: i_0/i_112/O (GATE_2_2)
+     3: i_0/i_112/I0 (GATE_2_2)
+     4: i_0/i_111/O (GATE_2_14_OR)
+     5: i_0/i_111/I1 (GATE_2_14_OR)
+     6: i_0/i_108/O (GATE_2_14_OR)
+     7: i_0/i_108/I1 (GATE_2_14_OR)
+     8: i_0/i_107/O (GATE_2_8_AND)
+     9: i_0/i_107/I1 (GATE_2_8_AND)
+    10: i_0/i_8/O[1] (CARRY4)
+    11: i_0/i_8/S[1] (CARRY4)
+    12: i_0/i_114/O (BUF)
+    13: i_0/i_114/I (BUF)
+    14: i_0/i_113/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_144/O (BUF)
+     1: i_0/i_144/I (BUF)
+     2: i_0/i_143/O (INV)
+     3: i_0/i_143/I (INV)
+     4: i_0/i_113/O (GATE_2_2)
+     5: i_0/i_113/I1 (GATE_2_2)
+     6: i_0/i_112/O (GATE_2_2)
+     7: i_0/i_112/I1 (GATE_2_2)
+     8: i_0/i_106/O (GATE_2_2)
+     9: i_0/i_106/I1 (GATE_2_2)
+    10: i_0/i_105/O (GATE_2_14_OR)
+    11: i_0/i_105/I0 (GATE_2_14_OR)
+    12: i_0/i_104/O (GATE_2_2)
+    13: i_0/i_104/I1 (GATE_2_2)
+    14: i_0/i_103/O (GATE_2_7_NAND)
+    15: i_0/i_103/I1 (GATE_2_7_NAND)
+    16: i_0/i_4/O[3] (CARRY4)
+    17: i_0/i_4/S[3] (CARRY4)
+    18: i_0/i_144/O (BUF)
+Found timing loop:
+     0: i_0/i_144/O (BUF)
+     1: i_0/i_144/I (BUF)
+     2: i_0/i_143/O (INV)
+     3: i_0/i_143/I (INV)
+     4: i_0/i_113/O (GATE_2_2)
+     5: i_0/i_113/I1 (GATE_2_2)
+     6: i_0/i_112/O (GATE_2_2)
+     7: i_0/i_112/I1 (GATE_2_2)
+     8: i_0/i_106/O (GATE_2_2)
+     9: i_0/i_106/I1 (GATE_2_2)
+    10: i_0/i_105/O (GATE_2_14_OR)
+    11: i_0/i_105/I1 (GATE_2_14_OR)
+    12: i_0/i_102/O (GATE_2_14_OR)
+    13: i_0/i_102/I1 (GATE_2_14_OR)
+    14: i_0/i_101/O (GATE_2_8_AND)
+    15: i_0/i_101/I1 (GATE_2_8_AND)
+    16: i_0/i_0/O[3] (CARRY4)
+    17: i_0/i_0/S[3] (CARRY4)
+    18: i_0/i_144/O (BUF)
+Found timing loop:
+     0: i_0/i_100/O (INV)
+     1: i_0/i_100/I (INV)
+     2: i_0/i_99/O (GATE_2_2)
+     3: i_0/i_99/I1 (GATE_2_2)
+     4: i_0/i_98/O (GATE_2_2)
+     5: i_0/i_98/I0 (GATE_2_2)
+     6: i_0/i_97/O (GATE_2_14_OR)
+     7: i_0/i_97/I1 (GATE_2_14_OR)
+     8: i_0/i_94/O (GATE_2_14_OR)
+     9: i_0/i_94/I1 (GATE_2_14_OR)
+    10: i_0/i_93/O (GATE_2_2)
+    11: i_0/i_93/I1 (GATE_2_2)
+    12: i_0/i_1/O[0] (CARRY4)
+    13: i_0/i_1/S[0] (CARRY4)
+    14: i_0/i_100/O (INV)
+Found timing loop:
+     0: i_0/i_99/O (GATE_2_2)
+     1: i_0/i_99/I1 (GATE_2_2)
+     2: i_0/i_98/O (GATE_2_2)
+     3: i_0/i_98/I1 (GATE_2_2)
+     4: i_0/i_92/O (GATE_2_2)
+     5: i_0/i_92/I0 (GATE_2_2)
+     6: i_0/i_91/Z (MUX1)
+     7: i_0/i_91/A (MUX1)
+     8: i_0/i_8/O[2] (CARRY4)
+     9: i_0/i_8/S[2] (CARRY4)
+    10: i_0/i_140/O (BUF)
+    11: i_0/i_140/I (BUF)
+    12: i_0/i_99/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_100/O (INV)
+     1: i_0/i_100/I (INV)
+     2: i_0/i_99/O (GATE_2_2)
+     3: i_0/i_99/I1 (GATE_2_2)
+     4: i_0/i_98/O (GATE_2_2)
+     5: i_0/i_98/I1 (GATE_2_2)
+     6: i_0/i_92/O (GATE_2_2)
+     7: i_0/i_92/I0 (GATE_2_2)
+     8: i_0/i_91/Z (MUX1)
+     9: i_0/i_91/B (MUX1)
+    10: i_0/i_90/Z (MUX1)
+    11: i_0/i_90/A (MUX1)
+    12: i_0/i_11/O[3] (CARRY4)
+    13: i_0/i_11/S[3] (CARRY4)
+    14: i_0/i_100/O (INV)
+Found timing loop:
+     0: i_0/i_86/O (GATE_2_14_OR)
+     1: i_0/i_86/I1 (GATE_2_14_OR)
+     2: i_0/i_85/O (GATE_2_2)
+     3: i_0/i_85/I0 (GATE_2_2)
+     4: i_0/i_84/O (GATE_2_14_OR)
+     5: i_0/i_84/I0 (GATE_2_14_OR)
+     6: i_0/i_83/O (GATE_2_2)
+     7: i_0/i_83/I1 (GATE_2_2)
+     8: i_0/i_81/O (GATE_2_8_AND)
+     9: i_0/i_81/I1 (GATE_2_8_AND)
+    10: i_0/i_5/O[1] (CARRY4)
+    11: i_0/i_5/S[1] (CARRY4)
+    12: i_0/i_89/O (BUF)
+    13: i_0/i_89/I (BUF)
+    14: i_0/i_88/O (INV)
+    15: i_0/i_88/I (INV)
+    16: i_0/i_86/O (GATE_2_14_OR)
+Found timing loop:
+     0: i_0/i_87/O (BUF)
+     1: i_0/i_87/I (BUF)
+     2: i_0/i_86/O (GATE_2_14_OR)
+     3: i_0/i_86/I1 (GATE_2_14_OR)
+     4: i_0/i_85/O (GATE_2_2)
+     5: i_0/i_85/I0 (GATE_2_2)
+     6: i_0/i_84/O (GATE_2_14_OR)
+     7: i_0/i_84/I1 (GATE_2_14_OR)
+     8: i_0/i_80/O (GATE_2_14_OR)
+     9: i_0/i_80/I1 (GATE_2_14_OR)
+    10: i_0/i_79/O (GATE_2_2)
+    11: i_0/i_79/I1 (GATE_2_2)
+    12: i_0/i_1/O[1] (CARRY4)
+    13: i_0/i_1/S[1] (CARRY4)
+    14: i_0/i_87/O (BUF)
+Found timing loop:
+     0: i_0/i_87/O (BUF)
+     1: i_0/i_87/I (BUF)
+     2: i_0/i_86/O (GATE_2_14_OR)
+     3: i_0/i_86/I1 (GATE_2_14_OR)
+     4: i_0/i_85/O (GATE_2_2)
+     5: i_0/i_85/I1 (GATE_2_2)
+     6: i_0/i_78/O (GATE_2_2)
+     7: i_0/i_78/I0 (GATE_2_2)
+     8: i_0/i_77/Z (MUX1)
+     9: i_0/i_77/B (MUX1)
+    10: i_0/i_76/Z (MUX1)
+    11: i_0/i_76/A (MUX1)
+    12: i_0/i_12/O[0] (CARRY4)
+    13: i_0/i_12/S[0] (CARRY4)
+    14: i_0/i_87/O (BUF)
+Found timing loop:
+     0: i_0/i_74/O (GATE_2_2)
+     1: i_0/i_74/I1 (GATE_2_2)
+     2: i_0/i_73/O (GATE_2_2)
+     3: i_0/i_73/I0 (GATE_2_2)
+     4: i_0/i_72/O (GATE_2_2)
+     5: i_0/i_72/I1 (GATE_2_2)
+     6: i_0/i_71/Z (MUX1)
+     7: i_0/i_71/A (MUX1)
+     8: i_0/i_1/O[2] (CARRY4)
+     9: i_0/i_1/S[2] (CARRY4)
+    10: i_0/i_142/O (BUF)
+    11: i_0/i_142/I (BUF)
+    12: i_0/i_74/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_75/O (INV)
+     1: i_0/i_75/I (INV)
+     2: i_0/i_74/O (GATE_2_2)
+     3: i_0/i_74/I1 (GATE_2_2)
+     4: i_0/i_73/O (GATE_2_2)
+     5: i_0/i_73/I1 (GATE_2_2)
+     6: i_0/i_69/O (GATE_2_2)
+     7: i_0/i_69/I0 (GATE_2_2)
+     8: i_0/i_68/Z (MUX1)
+     9: i_0/i_68/A (MUX1)
+    10: i_0/i_9/O[0] (CARRY4)
+    11: i_0/i_9/S[0] (CARRY4)
+    12: i_0/i_75/O (INV)
+Found timing loop:
+     0: i_0/i_75/O (INV)
+     1: i_0/i_75/I (INV)
+     2: i_0/i_74/O (GATE_2_2)
+     3: i_0/i_74/I1 (GATE_2_2)
+     4: i_0/i_73/O (GATE_2_2)
+     5: i_0/i_73/I1 (GATE_2_2)
+     6: i_0/i_69/O (GATE_2_2)
+     7: i_0/i_69/I0 (GATE_2_2)
+     8: i_0/i_68/Z (MUX1)
+     9: i_0/i_68/B (MUX1)
+    10: i_0/i_67/Z (MUX1)
+    11: i_0/i_67/A (MUX1)
+    12: i_0/i_12/O[1] (CARRY4)
+    13: i_0/i_12/S[1] (CARRY4)
+    14: i_0/i_75/O (INV)
+Found timing loop:
+     0: i_0/i_65/O (GATE_2_2)
+     1: i_0/i_65/I1 (GATE_2_2)
+     2: i_0/i_63/O (GATE_2_2)
+     3: i_0/i_63/I0 (GATE_2_2)
+     4: i_0/i_62/O (GATE_2_2)
+     5: i_0/i_62/I1 (GATE_2_2)
+     6: i_0/i_60/Z (MUX1)
+     7: i_0/i_60/A (MUX1)
+     8: i_0/i_1/O[3] (CARRY4)
+     9: i_0/i_1/S[3] (CARRY4)
+    10: i_0/i_141/O (BUF)
+    11: i_0/i_141/I (BUF)
+    12: i_0/i_65/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_66/O (INV)
+     1: i_0/i_66/I (INV)
+     2: i_0/i_65/O (GATE_2_2)
+     3: i_0/i_65/I1 (GATE_2_2)
+     4: i_0/i_63/O (GATE_2_2)
+     5: i_0/i_63/I0 (GATE_2_2)
+     6: i_0/i_62/O (GATE_2_2)
+     7: i_0/i_62/I1 (GATE_2_2)
+     8: i_0/i_60/Z (MUX1)
+     9: i_0/i_60/B (MUX1)
+    10: i_0/i_59/O (GATE_2_8_AND)
+    11: i_0/i_59/I1 (GATE_2_8_AND)
+    12: i_0/i_5/O[3] (CARRY4)
+    13: i_0/i_5/S[3] (CARRY4)
+    14: i_0/i_66/O (INV)
+Found timing loop:
+     0: i_0/i_66/O (INV)
+     1: i_0/i_66/I (INV)
+     2: i_0/i_65/O (GATE_2_2)
+     3: i_0/i_65/I1 (GATE_2_2)
+     4: i_0/i_63/O (GATE_2_2)
+     5: i_0/i_63/I1 (GATE_2_2)
+     6: i_0/i_58/O (GATE_2_2)
+     7: i_0/i_58/I0 (GATE_2_2)
+     8: i_0/i_57/Z (MUX1)
+     9: i_0/i_57/A (MUX1)
+    10: i_0/i_9/O[1] (CARRY4)
+    11: i_0/i_9/S[1] (CARRY4)
+    12: i_0/i_66/O (INV)
+Found timing loop:
+     0: i_0/i_66/O (INV)
+     1: i_0/i_66/I (INV)
+     2: i_0/i_65/O (GATE_2_2)
+     3: i_0/i_65/I1 (GATE_2_2)
+     4: i_0/i_63/O (GATE_2_2)
+     5: i_0/i_63/I1 (GATE_2_2)
+     6: i_0/i_58/O (GATE_2_2)
+     7: i_0/i_58/I0 (GATE_2_2)
+     8: i_0/i_57/Z (MUX1)
+     9: i_0/i_57/B (MUX1)
+    10: i_0/i_56/Z (MUX1)
+    11: i_0/i_56/A (MUX1)
+    12: i_0/i_12/O[2] (CARRY4)
+    13: i_0/i_12/S[2] (CARRY4)
+    14: i_0/i_66/O (INV)
+Found timing loop:
+     0: i_0/i_54/O (GATE_2_2)
+     1: i_0/i_54/I0 (GATE_2_2)
+     2: i_0/i_53/O (GATE_2_11)
+     3: i_0/i_53/I0 (GATE_2_11)
+     4: i_0/i_52/O (GATE_2_2)
+     5: i_0/i_52/I0 (GATE_2_2)
+     6: i_0/i_51/O (GATE_2_14_OR)
+     7: i_0/i_51/I1 (GATE_2_14_OR)
+     8: i_0/i_50/O (GATE_2_8_AND)
+     9: i_0/i_50/I1 (GATE_2_8_AND)
+    10: i_0/i_6/O[0] (CARRY4)
+    11: i_0/i_6/S[0] (CARRY4)
+    12: i_0/i_145/O (BUF)
+    13: i_0/i_145/I (BUF)
+    14: i_0/i_54/O (GATE_2_2)
+Found timing loop:
+     0: i_0/i_55/O (INV)
+     1: i_0/i_55/I (INV)
+     2: i_0/i_54/O (GATE_2_2)
+     3: i_0/i_54/I1 (GATE_2_2)
+     4: i_0/i_47/O (GATE_2_14_OR)
+     5: i_0/i_47/I1 (GATE_2_14_OR)
+     6: i_0/i_46/O (GATE_2_2)
+     7: i_0/i_46/I0 (GATE_2_2)
+     8: i_0/i_45/O (GATE_2_7_NAND)
+     9: i_0/i_45/I1 (GATE_2_7_NAND)
+    10: i_0/i_43/Z (MUX1)
+    11: i_0/i_43/A (MUX1)
+    12: i_0/i_12/O[3] (CARRY4)
+    13: i_0/i_12/S[3] (CARRY4)
+    14: i_0/i_55/O (INV)
+Found timing loop:
+     0: i_0/i_179/O (BUF)
+     1: i_0/i_179/I (BUF)
+     2: i_0/i_178/O (GATE_2_2)
+     3: i_0/i_178/I0 (GATE_2_2)
+     4: i_0/i_177/O (GATE_2_14_OR)
+     5: i_0/i_177/I1 (GATE_2_14_OR)
+     6: i_0/i_172/O (GATE_2_14_OR)
+     7: i_0/i_172/I1 (GATE_2_14_OR)
+     8: i_0/i_171/O (GATE_2_8_AND)
+     9: i_0/i_171/I1 (GATE_2_8_AND)
+    10: i_0/i_9/O[3] (CARRY4)
+    11: i_0/i_9/S[3] (CARRY4)
+    12: i_0/i_179/O (BUF)
+Found timing loop:
+     0: i_0/i_179/O (BUF)
+     1: i_0/i_179/I (BUF)
+     2: i_0/i_178/O (GATE_2_2)
+     3: i_0/i_178/I1 (GATE_2_2)
+     4: i_0/i_170/O (GATE_2_14_OR)
+     5: i_0/i_170/I0 (GATE_2_14_OR)
+     6: i_0/i_169/O (GATE_2_2)
+     7: i_0/i_169/I1 (GATE_2_2)
+     8: i_0/i_168/O (GATE_2_11)
+     9: i_0/i_168/I0 (GATE_2_11)
+    10: i_0/i_6/O[1] (CARRY4)
+    11: i_0/i_6/S[1] (CARRY4)
+    12: i_0/i_179/O (BUF)
+Found timing loop:
+     0: i_0/i_179/O (BUF)
+     1: i_0/i_179/I (BUF)
+     2: i_0/i_178/O (GATE_2_2)
+     3: i_0/i_178/I1 (GATE_2_2)
+     4: i_0/i_170/O (GATE_2_14_OR)
+     5: i_0/i_170/I1 (GATE_2_14_OR)
+     6: i_0/i_167/O (GATE_2_14_OR)
+     7: i_0/i_167/I0 (GATE_2_14_OR)
+     8: i_0/i_166/O (GATE_2_2)
+     9: i_0/i_166/I1 (GATE_2_2)
+    10: i_0/i_2/O[1] (CARRY4)
+    11: i_0/i_2/S[1] (CARRY4)
+    12: i_0/i_179/O (BUF)
+Found timing loop:
+     0: i_0/i_193/O (BUF)
+     1: i_0/i_193/I (BUF)
+     2: i_0/i_192/O (GATE_2_2)
+     3: i_0/i_192/I0 (GATE_2_2)
+     4: i_0/i_191/O (GATE_2_14_OR)
+     5: i_0/i_191/I0 (GATE_2_14_OR)
+     6: i_0/i_190/O (GATE_2_2)
+     7: i_0/i_190/I1 (GATE_2_2)
+     8: i_0/i_188/O (GATE_2_14_OR)
+     9: i_0/i_188/I1 (GATE_2_14_OR)
+    10: i_0/i_187/O (GATE_2_2)
+    11: i_0/i_187/I1 (GATE_2_2)
+    12: i_0/i_13/O[1] (CARRY4)
+    13: i_0/i_13/S[1] (CARRY4)
+    14: i_0/i_193/O (BUF)
+Found timing loop:
+     0: i_0/i_193/O (BUF)
+     1: i_0/i_193/I (BUF)
+     2: i_0/i_192/O (GATE_2_2)
+     3: i_0/i_192/I0 (GATE_2_2)
+     4: i_0/i_191/O (GATE_2_14_OR)
+     5: i_0/i_191/I1 (GATE_2_14_OR)
+     6: i_0/i_186/O (GATE_2_14_OR)
+     7: i_0/i_186/I1 (GATE_2_14_OR)
+     8: i_0/i_185/O (GATE_2_8_AND)
+     9: i_0/i_185/I1 (GATE_2_8_AND)
+    10: i_0/i_10/O[0] (CARRY4)
+    11: i_0/i_10/S[0] (CARRY4)
+    12: i_0/i_193/O (BUF)
+Found timing loop:
+     0: i_0/i_193/O (BUF)
+     1: i_0/i_193/I (BUF)
+     2: i_0/i_192/O (GATE_2_2)
+     3: i_0/i_192/I1 (GATE_2_2)
+     4: i_0/i_184/O (GATE_2_14_OR)
+     5: i_0/i_184/I0 (GATE_2_14_OR)
+     6: i_0/i_183/O (GATE_2_2)
+     7: i_0/i_183/I1 (GATE_2_2)
+     8: i_0/i_182/O (GATE_2_11)
+     9: i_0/i_182/I0 (GATE_2_11)
+    10: i_0/i_6/O[2] (CARRY4)
+    11: i_0/i_6/S[2] (CARRY4)
+    12: i_0/i_193/O (BUF)
+Found timing loop:
+     0: i_0/i_193/O (BUF)
+     1: i_0/i_193/I (BUF)
+     2: i_0/i_192/O (GATE_2_2)
+     3: i_0/i_192/I1 (GATE_2_2)
+     4: i_0/i_184/O (GATE_2_14_OR)
+     5: i_0/i_184/I1 (GATE_2_14_OR)
+     6: i_0/i_181/O (GATE_2_14_OR)
+     7: i_0/i_181/I1 (GATE_2_14_OR)
+     8: i_0/i_180/O (GATE_2_2)
+     9: i_0/i_180/I1 (GATE_2_2)
+    10: i_0/i_2/O[2] (CARRY4)
+    11: i_0/i_2/S[2] (CARRY4)
+    12: i_0/i_193/O (BUF)
+Found timing loop:
+     0: i_0/i_207/O (INV)
+     1: i_0/i_207/I (INV)
+     2: i_0/i_206/O (GATE_2_11)
+     3: i_0/i_206/I0 (GATE_2_11)
+     4: i_0/i_205/O (GATE_2_14_OR)
+     5: i_0/i_205/I0 (GATE_2_14_OR)
+     6: i_0/i_204/O (GATE_2_2)
+     7: i_0/i_204/I1 (GATE_2_2)
+     8: i_0/i_203/O (GATE_2_11)
+     9: i_0/i_203/I0 (GATE_2_11)
+    10: i_0/i_6/O[3] (CARRY4)
+    11: i_0/i_6/S[3] (CARRY4)
+    12: i_0/i_207/O (INV)
+Found timing loop:
+     0: i_0/i_207/O (INV)
+     1: i_0/i_207/I (INV)
+     2: i_0/i_206/O (GATE_2_11)
+     3: i_0/i_206/I0 (GATE_2_11)
+     4: i_0/i_205/O (GATE_2_14_OR)
+     5: i_0/i_205/I1 (GATE_2_14_OR)
+     6: i_0/i_202/O (GATE_2_14_OR)
+     7: i_0/i_202/I1 (GATE_2_14_OR)
+     8: i_0/i_201/O (GATE_2_2)
+     9: i_0/i_201/I1 (GATE_2_2)
+    10: i_0/i_2/O[3] (CARRY4)
+    11: i_0/i_2/S[3] (CARRY4)
+    12: i_0/i_207/O (INV)
+Found timing loop:
+     0: i_0/i_207/O (INV)
+     1: i_0/i_207/I (INV)
+     2: i_0/i_206/O (GATE_2_11)
+     3: i_0/i_206/I1 (GATE_2_11)
+     4: i_0/i_200/O (GATE_2_11)
+     5: i_0/i_200/I0 (GATE_2_11)
+     6: i_0/i_199/O (GATE_2_14_OR)
+     7: i_0/i_199/I1 (GATE_2_14_OR)
+     8: i_0/i_198/O (GATE_2_8_AND)
+     9: i_0/i_198/I1 (GATE_2_8_AND)
+    10: i_0/i_10/O[1] (CARRY4)
+    11: i_0/i_10/S[1] (CARRY4)
+    12: i_0/i_207/O (INV)
+Found timing loop:
+     0: i_0/i_207/O (INV)
+     1: i_0/i_207/I (INV)
+     2: i_0/i_206/O (GATE_2_11)
+     3: i_0/i_206/I1 (GATE_2_11)
+     4: i_0/i_200/O (GATE_2_11)
+     5: i_0/i_200/I1 (GATE_2_11)
+     6: i_0/i_197/O (GATE_2_11)
+     7: i_0/i_197/I0 (GATE_2_11)
+     8: i_0/i_196/O (GATE_2_14_OR)
+     9: i_0/i_196/I1 (GATE_2_14_OR)
+    10: i_0/i_195/O (GATE_2_2)
+    11: i_0/i_195/I1 (GATE_2_2)
+    12: i_0/i_13/O[2] (CARRY4)
+    13: i_0/i_13/S[2] (CARRY4)
+    14: i_0/i_207/O (INV)
+Found timing loop:
+     0: i_0/i_221/O (BUF)
+     1: i_0/i_221/I (BUF)
+     2: i_0/i_220/O (GATE_2_2)
+     3: i_0/i_220/I0 (GATE_2_2)
+     4: i_0/i_219/O (GATE_2_14_OR)
+     5: i_0/i_219/I0 (GATE_2_14_OR)
+     6: i_0/i_218/O (GATE_2_2)
+     7: i_0/i_218/I1 (GATE_2_2)
+     8: i_0/i_216/O (GATE_2_14_OR)
+     9: i_0/i_216/I1 (GATE_2_14_OR)
+    10: i_0/i_215/O (GATE_2_2)
+    11: i_0/i_215/I1 (GATE_2_2)
+    12: i_0/i_13/O[3] (CARRY4)
+    13: i_0/i_13/S[3] (CARRY4)
+    14: i_0/i_221/O (BUF)
+Found timing loop:
+     0: i_0/i_221/O (BUF)
+     1: i_0/i_221/I (BUF)
+     2: i_0/i_220/O (GATE_2_2)
+     3: i_0/i_220/I0 (GATE_2_2)
+     4: i_0/i_219/O (GATE_2_14_OR)
+     5: i_0/i_219/I1 (GATE_2_14_OR)
+     6: i_0/i_214/O (GATE_2_14_OR)
+     7: i_0/i_214/I1 (GATE_2_14_OR)
+     8: i_0/i_213/O (GATE_2_8_AND)
+     9: i_0/i_213/I1 (GATE_2_8_AND)
+    10: i_0/i_10/O[2] (CARRY4)
+    11: i_0/i_10/S[2] (CARRY4)
+    12: i_0/i_221/O (BUF)
+Found timing loop:
+     0: i_0/i_221/O (BUF)
+     1: i_0/i_221/I (BUF)
+     2: i_0/i_220/O (GATE_2_2)
+     3: i_0/i_220/I1 (GATE_2_2)
+     4: i_0/i_212/O (GATE_2_14_OR)
+     5: i_0/i_212/I0 (GATE_2_14_OR)
+     6: i_0/i_211/O (GATE_2_2)
+     7: i_0/i_211/I1 (GATE_2_2)
+     8: i_0/i_210/O (GATE_2_11)
+     9: i_0/i_210/I0 (GATE_2_11)
+    10: i_0/i_7/O[0] (CARRY4)
+    11: i_0/i_7/S[0] (CARRY4)
+    12: i_0/i_221/O (BUF)
+Found timing loop:
+     0: i_0/i_221/O (BUF)
+     1: i_0/i_221/I (BUF)
+     2: i_0/i_220/O (GATE_2_2)
+     3: i_0/i_220/I1 (GATE_2_2)
+     4: i_0/i_212/O (GATE_2_14_OR)
+     5: i_0/i_212/I1 (GATE_2_14_OR)
+     6: i_0/i_209/O (GATE_2_14_OR)
+     7: i_0/i_209/I1 (GATE_2_14_OR)
+     8: i_0/i_208/O (GATE_2_2)
+     9: i_0/i_208/I1 (GATE_2_2)
+    10: i_0/i_3/O[0] (CARRY4)
+    11: i_0/i_3/S[0] (CARRY4)
+    12: i_0/i_221/O (BUF)
+Found timing loop:
+     0: i_0/i_235/O (BUF)
+     1: i_0/i_235/I (BUF)
+     2: i_0/i_234/O (GATE_2_2)
+     3: i_0/i_234/I0 (GATE_2_2)
+     4: i_0/i_233/O (GATE_2_14_OR)
+     5: i_0/i_233/I0 (GATE_2_14_OR)
+     6: i_0/i_232/O (GATE_2_2)
+     7: i_0/i_232/I0 (GATE_2_2)
+     8: i_0/i_231/Z (MUX1)
+     9: i_0/i_231/A (MUX1)
+    10: i_0/i_14/O[0] (CARRY4)
+    11: i_0/i_14/S[0] (CARRY4)
+    12: i_0/i_235/O (BUF)
+Found timing loop:
+     0: i_0/i_235/O (BUF)
+     1: i_0/i_235/I (BUF)
+     2: i_0/i_234/O (GATE_2_2)
+     3: i_0/i_234/I0 (GATE_2_2)
+     4: i_0/i_233/O (GATE_2_14_OR)
+     5: i_0/i_233/I1 (GATE_2_14_OR)
+     6: i_0/i_230/O (GATE_2_14_OR)
+     7: i_0/i_230/I1 (GATE_2_14_OR)
+     8: i_0/i_229/O (GATE_2_8_AND)
+     9: i_0/i_229/I1 (GATE_2_8_AND)
+    10: i_0/i_10/O[3] (CARRY4)
+    11: i_0/i_10/S[3] (CARRY4)
+    12: i_0/i_235/O (BUF)
+Found timing loop:
+     0: i_0/i_235/O (BUF)
+     1: i_0/i_235/I (BUF)
+     2: i_0/i_234/O (GATE_2_2)
+     3: i_0/i_234/I1 (GATE_2_2)
+     4: i_0/i_228/O (GATE_2_2)
+     5: i_0/i_228/I0 (GATE_2_2)
+     6: i_0/i_227/O (GATE_2_14_OR)
+     7: i_0/i_227/I0 (GATE_2_14_OR)
+     8: i_0/i_226/O (GATE_2_2)
+     9: i_0/i_226/I1 (GATE_2_2)
+    10: i_0/i_225/O (GATE_2_8_AND)
+    11: i_0/i_225/I1 (GATE_2_8_AND)
+    12: i_0/i_7/O[1] (CARRY4)
+    13: i_0/i_7/S[1] (CARRY4)
+    14: i_0/i_235/O (BUF)
+Found timing loop:
+     0: i_0/i_3/O[1] (CARRY4)
+     1: i_0/i_3/S[1] (CARRY4)
+     2: i_0/i_235/O (BUF)
+     3: i_0/i_235/I (BUF)
+     4: i_0/i_234/O (GATE_2_2)
+     5: i_0/i_234/I1 (GATE_2_2)
+     6: i_0/i_228/O (GATE_2_2)
+     7: i_0/i_228/I0 (GATE_2_2)
+     8: i_0/i_227/O (GATE_2_14_OR)
+     9: i_0/i_227/I1 (GATE_2_14_OR)
+    10: i_0/i_224/O (GATE_2_14_OR)
+    11: i_0/i_224/I1 (GATE_2_14_OR)
+    12: i_0/i_223/O (GATE_2_2)
+    13: i_0/i_223/I1 (GATE_2_2)
+    14: i_0/i_3/O[1] (CARRY4)
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_162/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_154/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_131/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_138/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_124/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_113/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_99/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_86/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_73/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_73/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_65/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_46/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_46/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_54/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_178/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_178/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_192/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_192/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_206/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_206/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_220/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_220/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_0/i_235/O'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:16 . Memory (MB): peak = 586.336 ; gain = 414.168
+Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:46 . Memory (MB): peak = 587.109 ; gain = 415.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -240,17 +1039,44 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_156/O (LUT2)
+     1: i_156/I0 (LUT2)
+     2: i_155/O (LUT5)
+     3: i_155/I4 (LUT5)
+     4: i_235/O (LUT2)
+     5: i_235/I0 (LUT2)
+     6: i_284/O (LUT2)
+     7: i_284/I0 (LUT2)
+     8: i_156/O (LUT2)
+WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
+Found timing loop:
+     0: i_156/O (LUT2)
+     1: i_156/I0 (LUT2)
+     2: i_155/O (LUT5)
+     3: i_155/I1 (LUT5)
+     4: i_156/O (LUT2)
+WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
+Found timing loop:
+     0: i_234/O (LUT2)
+     1: i_234/I0 (LUT2)
+     2: i_158/O (LUT6)
+     3: i_158/I2 (LUT6)
+     4: i_234/O (LUT2)
+WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_158/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_11/O[0]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:16 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Technology Mapping : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:01:16 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 607.074 ; gain = 435.160
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:01:16 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -263,12 +1089,12 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop decrement/displayFlag_reg is being inverted and renamed to decrement/displayFlag_reg_inv.
+INFO: [Synth 8-5365] Flop cont/dec/displayFlag_reg is being inverted and renamed to cont/dec/displayFlag_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished IO Insertion : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -281,7 +1107,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,29 +1115,43 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+Found timing loop:
+     0: \decOut[0]_i_3 /O (LUT3)
+     1: \decOut[0]_i_3 /I0 (LUT3)
+     2: \decOut[0]_i_2 /O (LUT6)
+     3: \decOut[0]_i_2 /I4 (LUT6)
+     4: \decOut[0]_i_3 /O (LUT3)
+WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
+Found timing loop:
+     0: \decOut[0]_i_2 /O (LUT6)
+     1: \decOut[0]_i_2 /I4 (LUT6)
+     2: \decOut[0]_i_3 /O (LUT3)
+     3: \decOut[0]_i_3 /I0 (LUT3)
+     4: \decOut[0]_i_2 /O (LUT6)
+WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4parkingMeterTop.v:1]
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -328,51 +1168,50 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    44|
-|3     |LUT1   |   146|
-|4     |LUT2   |    46|
-|5     |LUT3   |    21|
-|6     |LUT4   |    35|
-|7     |LUT5   |    27|
-|8     |LUT6   |    93|
-|9     |MUXF7  |     3|
-|10    |FDRE   |   136|
-|11    |FDSE   |     4|
-|12    |IBUF   |     7|
-|13    |OBUF   |    11|
+|2     |CARRY4 |    55|
+|3     |LUT1   |   162|
+|4     |LUT2   |   103|
+|5     |LUT3   |     5|
+|6     |LUT4   |    10|
+|7     |LUT5   |    35|
+|8     |LUT6   |   113|
+|9     |FDRE   |   136|
+|10    |FDSE   |     4|
+|11    |IBUF   |     7|
+|12    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+------------------+------+
 |      |Instance        |Module            |Cells |
 +------+----------------+------------------+------+
-|1     |top             |                  |   575|
-|2     |  c1hz          |Lab4clock         |    80|
-|3     |  c62hz         |Lab4clock_0       |    80|
-|4     |  count         |Lab4counter       |   192|
-|5     |  decrement     |Lab4decrementer   |    22|
-|6     |  downdebounce  |Lab4Debouncer     |     5|
+|1     |top             |                  |   643|
+|2     |  c62hz         |Lab4clock         |    80|
+|3     |  clocker       |Lab4clock_0       |    79|
+|4     |  cont          |Lab4Controller    |    17|
+|5     |    dec         |Lab4decrementer   |    17|
+|6     |  downdebounce  |Lab4Debouncer     |    37|
 |7     |    FF1         |Lab4DFF_9         |     1|
 |8     |    FF2         |Lab4DFF_10        |     2|
-|9     |  leftdebounce  |Lab4Debouncer_1   |     5|
+|9     |  leftdebounce  |Lab4Debouncer_1   |   183|
 |10    |    FF1         |Lab4DFF_7         |     1|
 |11    |    FF2         |Lab4DFF_8         |     2|
-|12    |  outToBoard    |Lab4BCDTo7Segment |   161|
-|13    |  rightdebounce |Lab4Debouncer_2   |     5|
+|12    |  outToBoard    |Lab4BCDTo7Segment |   167|
+|13    |  rightdebounce |Lab4Debouncer_2   |    18|
 |14    |    FF1         |Lab4DFF_5         |     1|
 |15    |    FF2         |Lab4DFF_6         |     2|
-|16    |  updebounce    |Lab4Debouncer_3   |     5|
+|16    |  updebounce    |Lab4Debouncer_3   |    42|
 |17    |    FF1         |Lab4DFF           |     1|
 |18    |    FF2         |Lab4DFF_4         |     2|
 +------+----------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 620.969 ; gain = 145.070
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 620.969 ; gain = 448.801
+Synthesis finished with 0 errors, 0 critical warnings and 81 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 607.074 ; gain = 130.340
+Synthesis Optimization Complete : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 607.074 ; gain = 435.160
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -380,8 +1219,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:13 . Memory (MB): peak = 620.969 ; gain = 432.934
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 620.969 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 03 22:05:12 2017...
+synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:46 . Memory (MB): peak = 607.074 ; gain = 419.297
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 607.074 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 07 20:54:13 2017...

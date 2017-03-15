@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Fri Mar 03 22:06:43 2017
+| Date             : Tue Mar 07 20:57:33 2017
 | Host             : Jeremiah-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab4parkingMeterTop_power_routed.rpt -pb Lab4parkingMeterTop_power_summary_routed.pb
 | Design           : Lab4parkingMeterTop
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.098 |
-| Dynamic (W)              | 0.026 |
+| Total On-Chip Power (W)  | 0.095 |
+| Dynamic (W)              | 0.023 |
 | Device Static (W)        | 0.072 |
 | Effective TJA (C/W)      | 5.0   |
 | Max Ambient (C)          | 84.5  |
@@ -49,18 +49,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      446 |       --- |             --- |
-|   LUT as Logic |     0.002 |      182 |     20800 |            0.88 |
-|   CARRY4       |    <0.001 |       44 |      8150 |            0.54 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.002 |      508 |       --- |             --- |
+|   LUT as Logic |     0.002 |      232 |     20800 |            1.12 |
+|   CARRY4       |    <0.001 |       55 |      8150 |            0.67 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Register     |    <0.001 |      140 |     41600 |            0.34 |
-|   F7/F8 Muxes  |    <0.001 |        3 |     32600 |           <0.01 |
-|   Others       |     0.000 |       33 |       --- |             --- |
-| Signals        |     0.002 |      405 |       --- |             --- |
-| I/O            |     0.021 |       18 |       106 |           16.98 |
+|   Others       |     0.000 |       32 |       --- |             --- |
+| Signals        |     0.002 |      451 |       --- |             --- |
+| I/O            |     0.019 |       18 |       106 |           16.98 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.098 |          |           |                 |
+| Total          |     0.095 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +69,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.006 |      0.010 |
+| Vccint    |       1.000 |     0.014 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
-| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
+| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,15 +138,15 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| Lab4parkingMeterTop |     0.026 |
-|   c1hz              |    <0.001 |
+| Lab4parkingMeterTop |     0.023 |
 |   c62hz             |    <0.001 |
-|   count             |     0.004 |
-|   decrement         |    <0.001 |
+|   clocker           |    <0.001 |
+|   cont              |    <0.001 |
+|     dec             |    <0.001 |
 |   downdebounce      |    <0.001 |
 |     FF1             |    <0.001 |
 |     FF2             |    <0.001 |
-|   leftdebounce      |    <0.001 |
+|   leftdebounce      |     0.003 |
 |     FF1             |    <0.001 |
 |     FF2             |    <0.001 |
 |   outToBoard        |    <0.001 |

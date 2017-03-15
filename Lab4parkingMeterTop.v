@@ -15,13 +15,13 @@ Lab4clock clocker(CLK, 50000000, slowCLK);
 //Lab4clock c2hz (CLK, 25000000, out1Hz);
 
 //Decounce and synch inputs
-//Lab4Debouncer updebounce(UP, UPd, CLK);
-//Lab4Debouncer downdebounce(DWN, DWNd, CLK);
-//Lab4Debouncer leftdebounce(LEFT, LEFTd, CLK);
-//Lab4Debouncer rightdebounce(RIGHT, RIGHTd, CLK);
+Lab4Debouncer updebounce(UP, UPd, CLK);
+Lab4Debouncer downdebounce(DWN, DWNd, CLK);
+Lab4Debouncer leftdebounce(LEFT, LEFTd, CLK);
+Lab4Debouncer rightdebounce(RIGHT, RIGHTd, CLK);
 //Count and decrement
 //Lab4counter count(decOut, SW0, SW1, UP, LEFT, RIGHT, DWN, countOut);
-Lab4Controller cont(SW0, SW1, UP, LEFT, RIGHT, DWN, contOut, slowCLK, displayFlag);
+Lab4Controller cont(SW0, SW1, UPd, LEFTd, RIGHTd, DWNd, contOut, slowCLK, displayFlag);
 //Lab4decrementer decrement(out1f2Hz, countOut, decOut, displayFlag);
 //Convert to BCD
 Lab4BinaryToBCD convert(contOut, Thous, Hund, Tens, Ones);

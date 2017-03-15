@@ -2,11 +2,11 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Fri Mar 03 22:05:18 2017
-# Process ID: 15952
-# Current directory: C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.runs/impl_1
+# Start of session at: Tue Mar 07 20:57:59 2017
+# Process ID: 12380
+# Current directory: C:/Users/Jeremiah/Programming/ee460M/lab4/lab4.runs/impl_1
 # Command line: vivado.exe -log Lab4parkingMeterTop.vdi -applog -messageDb vivado.pb -mode batch -source Lab4parkingMeterTop.tcl -notrace
-# Log file: C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.runs/impl_1/Lab4parkingMeterTop.vdi
-# Journal file: C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.runs/impl_1\vivado.jou
+# Log file: C:/Users/Jeremiah/Programming/ee460M/lab4/lab4.runs/impl_1/Lab4parkingMeterTop.vdi
+# Journal file: C:/Users/Jeremiah/Programming/ee460M/lab4/lab4.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source Lab4parkingMeterTop.tcl -notrace

@@ -42,85 +42,17 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-
-start_step init_design
-set rc [catch {
-  create_msg_db init_design.pb
-  set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.xpr [current_project]
-  set_property ip_repo_paths c:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.cache/ip [current_project]
-  set_property ip_output_repo c:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.cache/ip [current_project]
-  add_files -quiet C:/Users/Jeremiah/Programming/EE-460M/lab4/lab4.runs/synth_1/Lab4parkingMeterTop.dcp
-  read_xdc C:/Users/Jeremiah/Programming/EE-460M/Basys3_Master_lab4.xdc
-  link_design -top Lab4parkingMeterTop -part xc7a35tcpg236-1
-  close_msg_db -file init_design.pb
-} RESULT]
-if {$rc} {
-  step_failed init_design
-  return -code error $RESULT
-} else {
-  end_step init_design
-}
-
-start_step opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  catch {write_debug_probes -quiet -force debug_nets}
-  opt_design 
-  write_checkpoint -force Lab4parkingMeterTop_opt.dcp
-  report_drc -file Lab4parkingMeterTop_drc_opted.rpt
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-}
-
-start_step place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  catch {write_hwdef -file Lab4parkingMeterTop.hwdef}
-  place_design 
-  write_checkpoint -force Lab4parkingMeterTop_placed.dcp
-  report_io -file Lab4parkingMeterTop_io_placed.rpt
-  report_utilization -file Lab4parkingMeterTop_utilization_placed.rpt -pb Lab4parkingMeterTop_utilization_placed.pb
-  report_control_sets -verbose -file Lab4parkingMeterTop_control_sets_placed.rpt
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-}
-
-start_step route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force Lab4parkingMeterTop_routed.dcp
-  report_drc -file Lab4parkingMeterTop_drc_routed.rpt -pb Lab4parkingMeterTop_drc_routed.pb
-  report_timing_summary -warn_on_violation -max_paths 10 -file Lab4parkingMeterTop_timing_summary_routed.rpt -rpx Lab4parkingMeterTop_timing_summary_routed.rpx
-  report_power -file Lab4parkingMeterTop_power_routed.rpt -pb Lab4parkingMeterTop_power_summary_routed.pb
-  report_route_status -file Lab4parkingMeterTop_route_status.rpt -pb Lab4parkingMeterTop_route_status.pb
-  report_clock_utilization -file Lab4parkingMeterTop_clock_utilization_routed.rpt
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
-}
+set_msg_config  -ruleid {1}  -id {Synth 8-295}  -string {{WARNING: [Synth 8-295] found timing loop. [C:/Users/Jeremiah/Programming/ee460M/Lab4decrementer.v:17]}}  -suppress 
 
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
+  open_checkpoint Lab4parkingMeterTop_routed.dcp
+  set_property webtalk.parent_dir C:/Users/Jeremiah/Programming/ee460M/lab4/lab4.cache/wt [current_project]
   catch { write_mem_info -force Lab4parkingMeterTop.mmi }
   write_bitstream -force Lab4parkingMeterTop.bit 
   catch { write_sysdef -hwdef Lab4parkingMeterTop.hwdef -bitfile Lab4parkingMeterTop.bit -meminfo Lab4parkingMeterTop.mmi -file Lab4parkingMeterTop.sysdef }
