@@ -3,6 +3,8 @@
 ## - uncomment the lines corresponding to used pins
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
+set_property RAM_STYLE BLOCK [get_cells *]
+
 ## Clock signal
 set_property PACKAGE_PIN W5 [get_ports clk]							
 	set_property IOSTANDARD LVCMOS33 [get_ports clk]
@@ -112,10 +114,10 @@ set_property PACKAGE_PIN W4 [get_ports {an[3]}]
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnC]
 #set_property PACKAGE_PIN T18 [get_ports btnU]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnU]
-set_property PACKAGE_PIN W19 [get_ports btns[1]]						
-	set_property IOSTANDARD LVCMOS33 [get_ports btns[1]]
-set_property PACKAGE_PIN T17 [get_ports btns[0]]						
+set_property PACKAGE_PIN W19 [get_ports btns[0]]						
 	set_property IOSTANDARD LVCMOS33 [get_ports btns[0]]
+set_property PACKAGE_PIN T17 [get_ports btns[1]]						
+	set_property IOSTANDARD LVCMOS33 [get_ports btns[1]]
 #set_property PACKAGE_PIN U17 [get_ports btnD]						
 	#set_property IOSTANDARD LVCMOS33 [get_ports btnD]
  

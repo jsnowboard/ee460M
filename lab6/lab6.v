@@ -85,8 +85,9 @@ module controller(clk, cs, we, address, data_in, data_out, mode, btns, swtchs, l
   reg[7:0] data_out; 
   reg cs;
   reg we;
+  reg prevL, prevR;
   
-  wire sevenSegCLK, slowCLK;
+  wire sevenSegCLK;
 	
 initial begin
 state = 0;
@@ -159,7 +160,6 @@ end
   			temp1 = data_in;
   			nextState = add2;
   		end
-  		// Make sure this can all be done in same state 
   		readSecondAdd : begin
   			temp2 = data_in;	
   			nextState = writeAdd;
@@ -186,7 +186,6 @@ end
   			temp1 = data_in;
   			nextState = sub2;
   		end
-  		// Make sure this can all be done in same state 
   		readSecondSub : begin
   			temp2 = data_in;
   			nextState = writeSub;
@@ -197,7 +196,7 @@ end
   			nextState = readSecondSub;
   		end
   		writeSub : begin
-  		    data_out = temp1 - temp2;
+  		    data_out = temp2 - temp1;
             address = SPR;
             we = 1;
             SPR = SPR - 1;
@@ -208,45 +207,47 @@ end
   	endcase
   end
 
-  always @(negedge slowCLK)
+  always @(negedge clk)
   begin
   	prevSPR <= SPR;
   	prevDAR <= DAR;
   	prev_temp1 <= temp1;
   	prev_temp2 <= temp2;
+  	prevL <= `BtnL;
+  	prevR <= `BtnR;
   	case(mode) 
   		0 : begin
-  			if(`BtnL) begin
+  			if(`BtnL & ~prevL) begin
   				state <= pop;
   			end
-  			else if(`BtnR) begin
+  			else if(`BtnR & ~prevR) begin
   				state <= push;
   			end
   			else state <= nextState;
   		end
   		1 : begin
-  			if(`BtnL) begin
+  			if(`BtnL & ~prevL) begin
   				state <= sub1;
   			end
-  			else if(`BtnR) begin
+  			else if(`BtnR & ~prevR) begin
   				state <= add1;
   			end
   			else state <= nextState;
   		end
   		2 : begin
-  			if(`BtnL) begin
+  			if(`BtnL & ~prevL) begin
   				state <= reset;
   			end
-  			else if(`BtnR) begin
+  			else if(`BtnR & ~prevR) begin
   				state <= top;
   			end
   			else state <= nextState;
   		end
   		3 : begin
-  			if(`BtnL) begin
+  			if(`BtnL & ~prevL) begin
   				state <= dec;
   			end
-  			else if(`BtnR) begin
+  			else if(`BtnR & ~prevR) begin
   				state <= inc;
   			end
   			else state <= nextState;
@@ -260,7 +261,6 @@ assign leds[6:0] = DAR;
 assign an[2] = 1;
 assign an[3] = 1;
 
-clockDivider C2(28'd2500000, clk, slowCLK);
 clockDivider C(28'd250000, clk, sevenSegCLK);
 SevenSeg_Display S(sevenSegCLK, DVR[3:0], DVR[7:4], an[0], an[1], segs);
 
