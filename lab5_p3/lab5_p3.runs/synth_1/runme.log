@@ -1,0 +1,480 @@
+
+*** Running vivado
+    with args -log Lab5_Snake.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Lab5_Snake.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source Lab5_Snake.tcl -notrace
+Command: synth_design -top Lab5_Snake -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2017.02' and will expire in -37 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 266.598 ; gain = 94.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Lab5_Snake' [C:/Users/Jeremiah/Programming/ee460M/Lab5_Snake.v:7]
+INFO: [Synth 8-638] synthesizing module 'Lab5_Keyboard' [C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v:3]
+INFO: [Synth 8-256] done synthesizing module 'Lab5_Keyboard' (1#1) [C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v:3]
+INFO: [Synth 8-638] synthesizing module 'Lab4clock' [C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v:1]
+INFO: [Synth 8-256] done synthesizing module 'Lab4clock' (2#1) [C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v:1]
+INFO: [Synth 8-638] synthesizing module 'HexTo7Segment' [C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v:3]
+	Parameter seven0 bound to: 8'b10000000 
+	Parameter seven1 bound to: 8'b11110010 
+	Parameter seven2 bound to: 8'b01001000 
+	Parameter seven3 bound to: 8'b01100000 
+	Parameter seven4 bound to: 8'b00110010 
+	Parameter seven5 bound to: 8'b00100100 
+	Parameter seven6 bound to: 8'b00000100 
+	Parameter seven7 bound to: 8'b11110000 
+	Parameter seven8 bound to: 8'b00000000 
+	Parameter seven9 bound to: 8'b00100000 
+	Parameter sevenDefault bound to: 8'b11111111 
+	Parameter sevenA bound to: 8'b00010001 
+	Parameter sevenB bound to: 8'b00000001 
+	Parameter sevenC bound to: 8'b10001101 
+	Parameter sevenD bound to: 8'b10000001 
+	Parameter sevenE bound to: 8'b00001101 
+	Parameter sevenF bound to: 8'b00011101 
+INFO: [Synth 8-226] default block is never used [C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v:66]
+INFO: [Synth 8-226] default block is never used [C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v:85]
+INFO: [Synth 8-256] done synthesizing module 'HexTo7Segment' (3#1) [C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v:3]
+INFO: [Synth 8-638] synthesizing module 'Lab5_VGAcontroller' [C:/Users/Jeremiah/Programming/ee460M/Lab5_VGAcontroller_C.v:7]
+	Parameter CYAN bound to: 4'b0000 
+	Parameter BLACK bound to: 4'b0000 
+	Parameter BLUE bound to: 4'b0000 
+	Parameter BROWN bound to: 4'b1000 
+	Parameter RED bound to: 4'b1111 
+	Parameter MAGENTA bound to: 4'b1111 
+	Parameter YELLOW bound to: 4'b1111 
+	Parameter WHITE bound to: 4'b1111 
+	Parameter GREEN bound to: 4'b0000 
+INFO: [Synth 8-638] synthesizing module 'DFF' [C:/Users/Jeremiah/Programming/ee460M/DFF.v:1]
+INFO: [Synth 8-256] done synthesizing module 'DFF' (4#1) [C:/Users/Jeremiah/Programming/ee460M/DFF.v:1]
+INFO: [Synth 8-638] synthesizing module 'DFF4' [C:/Users/Jeremiah/Programming/ee460M/DFF.v:10]
+INFO: [Synth 8-256] done synthesizing module 'DFF4' (5#1) [C:/Users/Jeremiah/Programming/ee460M/DFF.v:10]
+INFO: [Synth 8-256] done synthesizing module 'Lab5_VGAcontroller' (6#1) [C:/Users/Jeremiah/Programming/ee460M/Lab5_VGAcontroller_C.v:7]
+INFO: [Synth 8-638] synthesizing module 'Lab5_GameController' [C:/Users/Jeremiah/Programming/ee460M/Lab5_GameController.v:9]
+	Parameter xWid bound to: 10 - type: integer 
+	Parameter yWid bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Lab5_GameController' (7#1) [C:/Users/Jeremiah/Programming/ee460M/Lab5_GameController.v:9]
+INFO: [Synth 8-256] done synthesizing module 'Lab5_Snake' (8#1) [C:/Users/Jeremiah/Programming/ee460M/Lab5_Snake.v:7]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 302.738 ; gain = 130.910
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 302.738 ; gain = 130.910
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab5.xdc]
+Finished Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab5.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Jeremiah/Programming/ee460M/Basys3_Master_lab5.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab5_Snake_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Lab5_Snake_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 587.930 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "segX" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "segX" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "speed" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "snake" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "snake" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "snake" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "snakePosY" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "snakePosX" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "displayCode" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 16    
+	   8 Input     10 Bit        Muxes := 8     
+	  32 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	  11 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 8     
+	  11 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Lab5_Snake 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Lab4clock 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module HexTo7Segment 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	  32 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module DFF 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module DFF4 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Lab5_VGAcontroller 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+Module Lab5_GameController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 16    
+	   8 Input     10 Bit        Muxes := 8     
+	  11 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 5     
+	  11 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "displayCode" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 587.930 ; gain = 416.102
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance '\display/blueReg_reg[0] ' (FDR) to '\display/blueReg_reg[1] '
+INFO: [Synth 8-3886] merging instance '\display/blueReg_reg[1] ' (FDR) to '\display/blueReg_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/blueReg_reg[2] ' (FDR) to '\display/blueReg_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/greenReg_reg[0] ' (FDR) to '\display/greenReg_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/greenReg_reg[1] ' (FDR) to '\display/greenReg_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/greenReg_reg[2] ' (FDR) to '\display/greenReg_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/redReg_reg[0] ' (FDR) to '\display/redReg_reg[1] '
+INFO: [Synth 8-3886] merging instance '\display/redReg_reg[1] ' (FDR) to '\display/redReg_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/redReg_reg[2] ' (FDR) to '\display/redReg_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/f5/Q_reg[0] ' (FD) to '\display/f5/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f5/Q_reg[1] ' (FD) to '\display/f5/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f5/Q_reg[2] ' (FD) to '\display/f5/Q_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/f4/Q_reg[0] ' (FD) to '\display/f4/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f4/Q_reg[1] ' (FD) to '\display/f4/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f4/Q_reg[2] ' (FD) to '\display/f4/Q_reg[3] '
+INFO: [Synth 8-3886] merging instance '\display/f3/Q_reg[0] ' (FD) to '\display/f3/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f3/Q_reg[1] ' (FD) to '\display/f3/Q_reg[2] '
+INFO: [Synth 8-3886] merging instance '\display/f3/Q_reg[2] ' (FD) to '\display/f3/Q_reg[3] '
+WARNING: [Synth 8-3332] Sequential element (\kb/keyPressed_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/redReg_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/redReg_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/redReg_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f3/Q_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f3/Q_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f3/Q_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/greenReg_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/greenReg_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/greenReg_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f4/Q_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f4/Q_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f4/Q_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/blueReg_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/blueReg_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/blueReg_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f5/Q_reg[2] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f5/Q_reg[1] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\display/f5/Q_reg[0] ) is unused and will be removed from module Lab5_Snake.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 587.930 ; gain = 416.102
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 587.930 ; gain = 416.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\gc/prevState_reg[3] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/state_reg[3] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/snakePosX_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/snakePosY_reg[0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segY_reg[2][0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segY_reg[3][0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segY_reg[4][0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segX_reg[2][0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segX_reg[3][0] ) is unused and will be removed from module Lab5_Snake.
+WARNING: [Synth 8-3332] Sequential element (\gc/segX_reg[4][0] ) is unused and will be removed from module Lab5_Snake.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 593.801 ; gain = 421.973
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Lab5_Snake  | kb/keyPressed_reg[8] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     5|
+|2     |CARRY4 |   156|
+|3     |LUT1   |   260|
+|4     |LUT2   |   370|
+|5     |LUT3   |    62|
+|6     |LUT4   |   186|
+|7     |LUT5   |    77|
+|8     |LUT6   |    87|
+|9     |MUXF7  |     1|
+|10    |SRL16E |     1|
+|11    |FDRE   |   337|
+|12    |FDSE   |    18|
+|13    |IBUF   |     3|
+|14    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+--------------------+------+
+|      |Instance       |Module              |Cells |
++------+---------------+--------------------+------+
+|1     |top            |                    |  1590|
+|2     |  c62hz        |Lab4clock           |    80|
+|3     |  clk25Mhz     |Lab4clock_0         |    81|
+|4     |  display      |Lab5_VGAcontroller  |   433|
+|5     |    f1         |DFF                 |    55|
+|6     |    f2         |DFF_3               |    56|
+|7     |    f3         |DFF4                |     1|
+|8     |    f4         |DFF4_4              |     1|
+|9     |    f5         |DFF4_5              |     1|
+|10    |  gc           |Lab5_GameController |   751|
+|11    |    gameClock  |Lab4clock_1         |   107|
+|12    |    gameClockf |Lab4clock_2         |   108|
+|13    |  kb           |Lab5_Keyboard       |    22|
+|14    |  segOut       |HexTo7Segment       |   178|
++------+---------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 593.801 ; gain = 116.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 593.801 ; gain = 421.973
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 159 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 19 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 593.801 ; gain = 406.133
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 593.801 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 06 20:09:32 2017...

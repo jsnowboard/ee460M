@@ -1,0 +1,61 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Tue Apr 04 03:11:03 2017
+| Host         : Jeremiah-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Lab5_PartA_control_sets_placed.rpt
+| Design       : Lab5_PartA
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     8 |
+| Minimum Number of register sites lost to control set restrictions |    23 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           17 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              96 |           24 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+---------------+-------------------------------+------------------+----------------+
+|      Clock Signal     | Enable Signal |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++-----------------------+---------------+-------------------------------+------------------+----------------+
+|  c1000hz/slowCLK      |               |                               |                1 |              1 |
+|  clk_100Mhz_IBUF_BUFG |               |                               |                2 |              2 |
+|  PS2Clk_IBUF_BUFG     | keyboard/led0 |                               |                2 |              8 |
+|  Val_reg[7]_i_2_n_0   |               |                               |                6 |             12 |
+| ~PS2Clk_IBUF_BUFG     |               |                               |                9 |             19 |
+|  clk_100Mhz_IBUF_BUFG |               | c62hz/counter[0]_i_1_n_0      |                8 |             32 |
+|  clk_100Mhz_IBUF_BUFG |               | c1000hz/counter[0]_i_1__0_n_0 |                8 |             32 |
+|  Val_reg[7]_i_2_n_0   |               | outVal/clear                  |                8 |             32 |
++-----------------------+---------------+-------------------------------+------------------+----------------+
+
+

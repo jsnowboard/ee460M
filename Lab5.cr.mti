@@ -1,13 +1,31 @@
-C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v
+C:/Users/Jeremiah/Programming/ee460M/Lab5_PartA.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/Lab5_PartA.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab5_PartA
+
+Top level modules:
+	Lab5_PartA
+
+} {} {}} C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Lab4clock
 
 Top level modules:
 	Lab4clock
 
-} {} {}} C:/Users/Jeremiah/Programming/ee460M/DFF.v {0 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/DFF.v
+} {} {}} C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Lab5_Keyboard
+
+Top level modules:
+	Lab5_Keyboard
+
+} {} {}} C:/Users/Jeremiah/Programming/ee460M/DFF.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/DFF.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module DFF
-** Error: C:/Users/Jeremiah/Programming/ee460M/DFF.v(3): In, out, or inout does not appear in port list: Qp.
+-- Compiling module DFF4
 
-} {4.0 5.0} {}}
+Top level modules:
+	DFF
+	DFF4
+
+} {} {}}

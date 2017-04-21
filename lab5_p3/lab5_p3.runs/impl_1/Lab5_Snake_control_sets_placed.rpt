@@ -1,0 +1,72 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Thu Apr 06 20:10:11 2017
+| Host         : Jeremiah-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Lab5_Snake_control_sets_placed.rpt
+| Design       : Lab5_Snake
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    19 |
+| Minimum Number of register sites lost to control set restrictions |    45 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              54 |           27 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             192 |           48 |
+| Yes          | No                    | No                     |              13 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              96 |           30 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------+--------------------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal         |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------------+-------------------------------+--------------------------------+------------------+----------------+
+|  PS2Clk_IBUF_BUFG     |                               |                                |                1 |              1 |
+|  gameClk              |                               |                                |                3 |              4 |
+|  gameClk              | gc/snakePosY                  | gc/snakePosY[9]_i_1_n_0        |                2 |              4 |
+|  gameClk              | gc/snakePosY                  |                                |                4 |              5 |
+|  gameClk              | gc/snakePosX                  | gc/snakePosX[9]_i_1_n_0        |                3 |              6 |
+|  clk_BUFG             |                               |                                |                5 |              8 |
+|  PS2Clk_IBUF_BUFG     | kb/led                        |                                |                2 |              8 |
+|  clk_100Mhz_IBUF_BUFG |                               |                                |                7 |             11 |
+|  slowCLK_BUFG         |                               |                                |                5 |             12 |
+|  gameClk              | gc/segX                       | gc/segY[2][5]_i_1_n_0          |                6 |             18 |
+| ~PS2Clk_IBUF_BUFG     |                               |                                |                7 |             19 |
+|  slowCLK_BUFG         |                               | segOut/clear                   |                8 |             32 |
+|  clk_BUFG             |                               | display/hcount_reg[0]_i_1_n_0  |                8 |             32 |
+|  clk_BUFG             | display/hcount_reg[0]_i_1_n_0 | display/vcount                 |                8 |             32 |
+|  clk_100Mhz_IBUF_BUFG |                               | gc/gameClockf/clear            |                8 |             32 |
+|  clk_100Mhz_IBUF_BUFG |                               | gc/gameClock/clear             |                8 |             32 |
+|  clk_100Mhz_IBUF_BUFG |                               | clk25Mhz/counter[0]_i_1__0_n_0 |                8 |             32 |
+|  clk_100Mhz_IBUF_BUFG |                               | c62hz/counter[0]_i_1_n_0       |                8 |             32 |
+|  gameClk              | gc/segX                       | gc/segY[2][9]_i_1_n_0          |               11 |             36 |
++-----------------------+-------------------------------+--------------------------------+------------------+----------------+
+
+

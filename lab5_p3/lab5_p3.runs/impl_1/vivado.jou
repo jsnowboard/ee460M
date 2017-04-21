@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Apr 06 20:09:39 2017
+# Process ID: 17520
+# Current directory: C:/Users/Jeremiah/Programming/ee460M/lab5_p3/lab5_p3.runs/impl_1
+# Command line: vivado.exe -log Lab5_Snake.vdi -applog -messageDb vivado.pb -mode batch -source Lab5_Snake.tcl -notrace
+# Log file: C:/Users/Jeremiah/Programming/ee460M/lab5_p3/lab5_p3.runs/impl_1/Lab5_Snake.vdi
+# Journal file: C:/Users/Jeremiah/Programming/ee460M/lab5_p3/lab5_p3.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Lab5_Snake.tcl -notrace
