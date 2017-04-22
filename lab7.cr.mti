@@ -1,0 +1,20 @@
+C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module MIPS_Testbench
+-- Compiling module mips_testbench2
+
+Top level modules:
+	MIPS_Testbench
+	mips_testbench2
+
+} {} {}} C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v {1 {vlog -work work -stats=none C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Complete_MIPS
+-- Compiling module Memory
+-- Compiling module REG
+-- Compiling module MIPS
+
+Top level modules:
+	Complete_MIPS
+
+} {} {}}

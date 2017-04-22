@@ -2,6 +2,7 @@ module Complete_MIPS(CLK, RST, A_Out, D_Out);
   // Will need to be modified to add functionality
   input CLK;
   input RST;
+  output A_Out, D_Out;
 
   wire CS, WE;
   wire [6:0] ADDR;
