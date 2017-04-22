@@ -9,23 +9,23 @@ z2
 cModel Technology
 Z0 dC:/Users/Jeremiah/Programming/EE-460M
 vComplete_MIPS
-Z1 !s110 1492806526
+Z1 !s110 1492897995
 !i10b 1
 !s100 Hi?G0kN=e6BNQcW79QPZc2
-I@I25I=me?6zDYS:CGgG>o0
+I?Bg1RQD[VPQ0=CGUOPH9U2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Users/Jeremiah/Programming/ee460M
-Z4 w1492806520
-Z5 8C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v
-Z6 FC:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v
+Z4 w1492897992
+Z5 8C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v
+Z6 FC:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v
 L0 1
 Z7 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z8 !s108 1492806526.000000
-Z9 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v|
-Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v|
+Z8 !s108 1492897995.000000
+Z9 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v|
 !s101 -O0
 !i113 1
 Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
@@ -452,7 +452,7 @@ vMemory
 R1
 !i10b 1
 !s100 9fc7`Nbgf;Ja71bc:>_Yg1
-IT?mRU9A?mOHVd@D3U^G8O2
+I`f`BN`6n`n;h:df`0JTLJ3
 R2
 R3
 R4
@@ -473,14 +473,14 @@ n@memory
 vMIPS
 R1
 !i10b 1
-!s100 g]TgejWlCz@aXXoH<>bT20
-IU>6=?nNFLUV8fYMG8@S=22
+!s100 Bm1@=<O2Rc?hlBiE35QM]2
+I4hY[^QJaAReO=el_dl7_A3
 R2
 R3
 R4
 R5
 R6
-L0 98
+L0 99
 R7
 r1
 !s85 0
@@ -538,14 +538,14 @@ R11
 vREG
 R1
 !i10b 1
-!s100 RD_AzkoQ<0NGHFPXVk7<I2
-IYhTb6M2W5GGiXhW1N:OH40
+!s100 h?Icacg[4f_[AjRk7WDoF2
+I2W2B3aQTDEKk_g3TOTGTI0
 R2
 R3
 R4
 R5
 R6
-L0 56
+L0 57
 R7
 r1
 !s85 0
