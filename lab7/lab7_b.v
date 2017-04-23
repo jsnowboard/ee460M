@@ -1,14 +1,16 @@
-module Complete_MIPS(CLK, RST, A_Out, D_Out);
+module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out);
   // Will need to be modified to add functionality
   input CLK;
   input RST;
+  input [1:0] BTN;
+  input [2:0] SW;
   output A_Out, D_Out;
 
   wire CS, WE;
   wire [6:0] ADDR;
   wire [31:0] Mem_Bus;
 
-  MIPS CPU(CLK, RST, CS, WE, ADDR, Mem_Bus);
+  MIPS CPU(SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
   Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
 
 endmodule
@@ -54,35 +56,61 @@ endmodule
 ///////////////////////////////////////////////////////////////////////////////
 // Modified DR, SR1, and SR2 to make room for mhi and mLo
 
-module REG(CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2);
+module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, seven);
   input CLK;
   input RegW;
   input [5:0] DR;
   input [5:0] SR1;
   input [5:0] SR2;
   input [31:0] Reg_In;
+  input [1:0] BTN;
+  input [2:0] SW;
+  output [3:0] AN;
+  output [7:1] seven;
   output reg [31:0] ReadReg1;
   output reg [31:0] ReadReg2;
+  reg [15:0] value;
+  wire sevenSegCLK;
 
   //parameter MHi = 6'd33, MLo = 6'd32;
 
   reg [31:0] REG [0:33];
-  integer i;
-
+    
   initial begin
     ReadReg1 = 0;
     ReadReg2 = 0;
   end
 
+  always @(BTN)
+  begin
+    case(BTN)
+        2'b00 : begin
+            value = REG[2][15:0];
+        end
+        2'b01 : begin
+            value = REG[2][31:16];
+        end
+        2'b10 : begin   
+            value = REG[3][15:0];
+        end
+        2'b11 : begin
+            value = REG[3][31:16];
+        end
+    endcase      
+  end
+
   always @(posedge CLK)
   begin
-
+    REG[1][2:0] <= SW; 
     if(RegW == 1'b1)
       REG[DR] <= Reg_In[31:0];
 
     ReadReg1 <= REG[SR1];
     ReadReg2 <= REG[SR2];
   end
+  
+  clockDivider C(28'd250000, clk, sevenSegCLK);
+  SevenSeg_Display S(sevenSegCLK, value, AN, seven);
 endmodule
 
 
@@ -96,8 +124,10 @@ endmodule
 `define f_code instr[5:0]
 `define numshift instr[10:6]
 
-module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus);
+module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
   input CLK, RST;
+  input [1:0] BTN;
+  input [2:0] SW;
   output reg CS, WE;
   output [6:0] ADDR;
   inout [31:0] Mem_Bus;
@@ -154,14 +184,15 @@ module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus);
   // registers for the multiply
   reg [31:0] mhi, mlo, mlo_save, mhi_save;
   parameter MHi = 6'd33, MLo = 6'd32;
-
+  integer i;
   //combinational
   assign imm_ext = (instr[15] == 1)? {16'hFFFF, instr[15:0]} : {16'h0000, instr[15:0]};//Sign extend immediate field
   // added J format for jal
   assign dr = (format == R)? ( 
                               (`f_code == mult)? (
                                                    (state == 3'd3)? MHi : MLo
-                                                 ) : {1'b0,(instr[15:11])} 
+                                                 ) : (`f_code == rbit || `f_code == rev) ?
+                                                        {1'b0,(instr[25:21])} : {1'b0,(instr[15:11])} 
                               ) : (
                                    (format == J)? 6'd31 : {1'b0,instr[20:16]}
                                    ); //Destination Register MUX (MUX1)
@@ -181,7 +212,7 @@ module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus);
 
   //drive memory bus only during writes
   assign ADDR = (fetchDorI)? pc : alu_result_save[6:0]; //ADDR Mux
-  REG Register(CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2);
+  REG Register(SW, BTN, CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2);
 
   initial begin
     op = and1; opsave = and1;
@@ -241,6 +272,34 @@ module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus);
         else if (opsave == sll) alu_result = alu_in_B << `numshift;
         else if (opsave == slt) alu_result = (alu_in_A < alu_in_B)? 32'd1 : 32'd0;
         else if (opsave == xor1) alu_result = alu_in_A ^ alu_in_B;
+        else if (opsave == mfhi) alu_result = alu_in_A;
+        else if (opsave == mflo) alu_result = alu_in_A;
+        else if (opsave == lui) begin
+            alu_result = alu_in_B << 16;
+        end
+        else if (opsave == add8) begin
+            alu_result[31:24] = alu_in_A[31:24] + alu_in_B[31:24];
+            alu_result[23:16] = alu_in_A[23:16] + alu_in_B[23:16];
+            alu_result[15:8] = alu_in_A[15:8] + alu_in_B[15:8];
+            alu_result[7:0] = alu_in_A[7:0] + alu_in_B[7:0];
+        end
+        else if (opsave == rbit) begin
+            for(i = 0; i < 32; i = i+1) alu_result[i] = alu_in_B[31-i];
+        end
+        else if (opsave == rev) begin
+            alu_result[31:24] = alu_in_B[7:0];
+            alu_result[23:16] = alu_in_B[15:8];
+            alu_result[15:8] = alu_in_B[23:16];
+            alu_result[7:0] = alu_in_B[31:24];
+        end
+        else if (opsave == sadd) begin
+            if(alu_in_A + alu_in_B > 4294967295) alu_result = 4294967295;
+            else alu_result = alu_in_A + alu_in_B;
+        end
+        else if (opsave == ssub) begin
+            if(alu_in_A - alu_in_B < 0) alu_result = 0;
+            else alu_result = alu_in_A - alu_in_B;
+        end
         // added for jal
         else if (opsave == jal) begin 
           alu_result = pc;
@@ -314,4 +373,85 @@ module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus);
 
   end //always
 
+endmodule
+
+module SevenSeg_Display(CLK, num, AN, seven);
+
+input [15:0] num;
+input CLK;
+output [3:0] AN;
+output [7:1] seven;
+
+reg sevenSeg_state, sevenSeg_nextState;
+reg [3:0] binary;
+reg [3:0] AN;
+
+always @(sevenSeg_state or num)
+begin
+    AN = 4'b1111;
+	sevenSeg_nextState = 0;
+	case(sevenSeg_state)
+		0 : begin
+			AN[0] = 0;
+			sevenSeg_nextState = 1;
+			binary = num[3:0];
+		end
+		1 : begin
+		    AN[1] = 0;
+			sevenSeg_nextState = 2;
+			binary = num[7:4];
+		end
+		2 : begin
+		    AN[2] = 0;
+            sevenSeg_nextState = 3;
+            binary = num[11:8];
+		end
+		3 : begin
+		    AN[3] = 0;
+            sevenSeg_nextState = 0;
+            binary = num[15:12];
+		end
+		default : begin
+		    sevenSeg_nextState = 0;
+		    binary = num[3:0];
+		end
+	endcase
+end
+
+always @(posedge CLK)
+begin
+	sevenSeg_state <= sevenSeg_nextState;
+end
+
+binary_seven B(binary, seven);
+
+endmodule
+
+
+module binary_seven (binary, seven);
+	input [3:0] binary;
+	output[7:1] seven;
+	reg [7:1] seven;
+	always @(binary)
+	begin
+ 		case (binary)
+ 			4'b0000 : seven = 7'b0000001 ;
+ 			4'b0001 : seven = 7'b1001111 ;
+ 			4'b0010 : seven = 7'b0010010 ;
+ 			4'b0011 : seven = 7'b0000110 ;
+ 			4'b0100 : seven = 7'b1001100 ;
+ 			4'b0101 : seven = 7'b0100100 ;
+ 			4'b0110 : seven = 7'b0100000 ;
+ 			4'b0111 : seven = 7'b0001111 ;
+ 			4'b1000 : seven = 7'b0000000 ;
+ 			4'b1001 : seven = 7'b0001100 ;
+			4'b1010 : seven = 7'b0001000 ;
+			4'b1011 : seven = 7'b1100000 ;
+			4'b1100 : seven = 7'b0110001 ;
+			4'b1101 : seven = 7'b1000010 ;
+			4'b1110 : seven = 7'b0110000 ;
+			4'b1111 : seven = 7'b0111000 ;
+ 			default : seven = 7'b0000001 ;
+ 		endcase
+ 	end
 endmodule
