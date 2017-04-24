@@ -1,16 +1,18 @@
-module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out);
+module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out, AN, seven);
   // Will need to be modified to add functionality
   input CLK;
   input RST;
   input [1:0] BTN;
   input [2:0] SW;
   output A_Out, D_Out;
+  output [3:0] AN;
+  output [7:1] seven;
 
   wire CS, WE;
   wire [6:0] ADDR;
   wire [31:0] Mem_Bus;
 
-  MIPS CPU(SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
+  MIPS CPU(SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
 
 endmodule
@@ -30,11 +32,13 @@ module Memory(CS, WE, CLK, ADDR, Mem_Bus);
 
   reg [31:0] data_out;
   reg [31:0] RAM [0:127];
-
+  integer i;
 
   initial
   begin
     /* Write your Verilog-Text IO code here */
+    $readmemh("lab7b.txt", RAM);
+    for(i = 41; i < 128; i = i+1) RAM[i] = 32'd0;
   end
 
   assign Mem_Bus = ((CS == 1'b0) || (WE == 1'b1)) ? 32'bZ : data_out;
@@ -80,24 +84,25 @@ module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, sev
     ReadReg1 = 0;
     ReadReg2 = 0;
   end
-
-  always @(BTN)
+  
+  always @(BTN or SW or REG[2] or REG[3])
   begin
-    case(BTN)
-        2'b00 : begin
-            value = REG[2][15:0];
+    value = 0;
+    case(SW)
+        3'd1, 3'd2, 3'd3, 3'd4, 3'd5, 3'd6 : begin
+            if(BTN == 2'b00) value = REG[2][15:0];
+            else value = REG[2][31:16];
         end
-        2'b01 : begin
-            value = REG[2][31:16];
+        3'd0 : begin
+            if(BTN == 2'b00) value = REG[2][15:0];
+            else if(BTN == 2'b01) value = REG[2][31:16];
+            else if(BTN == 2'b10) value = REG[3][15:0];
+            else value = REG[3][31:16];
         end
-        2'b10 : begin   
-            value = REG[3][15:0];
-        end
-        2'b11 : begin
-            value = REG[3][31:16];
-        end
+        default : value = 0;
     endcase      
   end
+  
 
   always @(posedge CLK)
   begin
@@ -109,7 +114,7 @@ module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, sev
     ReadReg2 <= REG[SR2];
   end
   
-  clockDivider C(28'd250000, clk, sevenSegCLK);
+  clockDivider C(28'd250000, CLK, sevenSegCLK);
   SevenSeg_Display S(sevenSegCLK, value, AN, seven);
 endmodule
 
@@ -124,13 +129,15 @@ endmodule
 `define f_code instr[5:0]
 `define numshift instr[10:6]
 
-module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
+module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   input CLK, RST;
   input [1:0] BTN;
   input [2:0] SW;
   output reg CS, WE;
   output [6:0] ADDR;
   inout [31:0] Mem_Bus;
+  output [3:0] AN;
+  output [7:1] seven;
 
   //special instructions (opcode == 000000), values of F code (bits 5-0):
   parameter add  = 6'b100000;
@@ -179,7 +186,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
   reg [31:0] alu_result_save;
   reg alu_or_mem, alu_or_mem_save, regw, writing, reg_or_imm, reg_or_imm_save;
   reg fetchDorI;
-  wire [4:0] dr;
+  wire [5:0] dr, sr1, sr2;
   reg [2:0] state, nstate;
   // registers for the multiply
   reg [31:0] mhi, mlo, mlo_save, mhi_save;
@@ -212,7 +219,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus);
 
   //drive memory bus only during writes
   assign ADDR = (fetchDorI)? pc : alu_result_save[6:0]; //ADDR Mux
-  REG Register(SW, BTN, CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2);
+  REG Register(SW, BTN, CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2, AN, seven);
 
   initial begin
     op = and1; opsave = and1;
@@ -382,7 +389,7 @@ input CLK;
 output [3:0] AN;
 output [7:1] seven;
 
-reg sevenSeg_state, sevenSeg_nextState;
+reg [1:0] sevenSeg_state, sevenSeg_nextState;
 reg [3:0] binary;
 reg [3:0] AN;
 
