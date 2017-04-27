@@ -37,7 +37,7 @@ module Memory(CS, WE, CLK, ADDR, Mem_Bus);
   initial
   begin
     /* Write your Verilog-Text IO code here */
-    $readmemh("lab7b.txt", RAM);
+    $readmemh("//Mac/Home/Documents/EE460M/lab7b_modelsim/lab7b.txt", RAM);
     for(i = 41; i < 128; i = i+1) RAM[i] = 32'd0;
   end
 
@@ -75,6 +75,7 @@ module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, sev
   output reg [31:0] ReadReg2;
   reg [15:0] value;
   wire sevenSegCLK;
+  integer i;
 
   //parameter MHi = 6'd33, MLo = 6'd32;
 
@@ -83,6 +84,7 @@ module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, sev
   initial begin
     ReadReg1 = 0;
     ReadReg2 = 0;
+    for(i = 0; i < 34; i = i+1) REG[i] = 0;
   end
   
   always @(BTN or SW or REG[2] or REG[3])
@@ -192,6 +194,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   reg [31:0] mhi, mlo, mlo_save, mhi_save;
   parameter MHi = 6'd33, MLo = 6'd32;
   integer i;
+
   //combinational
   assign imm_ext = (instr[15] == 1)? {16'hFFFF, instr[15:0]} : {16'h0000, instr[15:0]};//Sign extend immediate field
   // added J format for jal
@@ -222,8 +225,9 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   REG Register(SW, BTN, CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2, AN, seven);
 
   initial begin
+	pc = 0;
     op = and1; opsave = and1;
-    state = 3'b0; nstate = 3'b0;
+    state = 3'd0; nstate = 3'd0;
     alu_or_mem = 0;
     regw = 0;
     fetchDorI = 0;
@@ -246,7 +250,6 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
         nstate = 3'd2; reg_or_imm = 0; alu_or_mem = 0;
         if (format == J) begin //jump, and finish
           if (`opcode == j) begin
-            // npc = {pc[31:26], instr[25:0]};
             npc = instr[6:0];
             nstate = 3'd0;
           end
@@ -267,6 +270,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
           end
           else if (`opcode == andi) op = and1;
           else if (`opcode == ori) op = or1;
+		  else op = `opcode;
         end
       end
       2: begin //execute
@@ -314,6 +318,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
         end
         // added for mult
         else if (opsave == mult) {mhi, mlo} = alu_in_A * alu_in_B; 
+
         if (((alu_in_A == alu_in_B)&&(`opcode == beq)) || ((alu_in_A != alu_in_B)&&(`opcode == bne))) begin
           npc = pc + imm_ext[6:0];
           nstate = 3'd0;
