@@ -11,9 +11,14 @@ module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out, AN, seven);
   wire CS, WE;
   wire [6:0] ADDR;
   wire [31:0] Mem_Bus;
+  wire sevenSegCLK,slowCLK;
 
-  MIPS CPU(SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
+  MIPS CPU(SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
+  clockDivider C(28'd2500000, CLK, slowCLK);
+  clockDivider C2(28'd250000, CLK, sevenSegCLK);
+
+
 
 endmodule
 
@@ -37,7 +42,7 @@ module Memory(CS, WE, CLK, ADDR, Mem_Bus);
   initial
   begin
     /* Write your Verilog-Text IO code here */
-    $readmemh("//Mac/Home/Documents/EE460M/lab7b_modelsim/lab7b.txt", RAM);
+    $readmemh("//Mac/Home/Documents/EE460M/ee460m/lab7/lab7b.txt", RAM);
     for(i = 41; i < 128; i = i+1) RAM[i] = 32'd0;
   end
 
@@ -60,8 +65,8 @@ endmodule
 ///////////////////////////////////////////////////////////////////////////////
 // Modified DR, SR1, and SR2 to make room for mhi and mLo
 
-module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, seven);
-  input CLK;
+module REG(SW, BTN, CLK, sevenSegCLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, seven);
+  input CLK, sevenSegCLK;
   input RegW;
   input [5:0] DR;
   input [5:0] SR1;
@@ -116,7 +121,6 @@ module REG(SW, BTN, CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2, AN, sev
     ReadReg2 <= REG[SR2];
   end
   
-  clockDivider C(28'd250000, CLK, sevenSegCLK);
   SevenSeg_Display S(sevenSegCLK, value, AN, seven);
 endmodule
 
@@ -131,8 +135,8 @@ endmodule
 `define f_code instr[5:0]
 `define numshift instr[10:6]
 
-module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
-  input CLK, RST;
+module MIPS (SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
+  input CLK, sevenSegCLK, RST;
   input [1:0] BTN;
   input [2:0] SW;
   output reg CS, WE;
@@ -192,7 +196,8 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   reg [2:0] state, nstate;
   // registers for the multiply
   reg [31:0] mhi, mlo, mlo_save, mhi_save;
-  parameter MHi = 6'd33, MLo = 6'd32;
+  parameter MHi = 6'd33;
+  parameter MLo = 6'd32;
   integer i;
 
   //combinational
@@ -222,7 +227,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
 
   //drive memory bus only during writes
   assign ADDR = (fetchDorI)? pc : alu_result_save[6:0]; //ADDR Mux
-  REG Register(SW, BTN, CLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2, AN, seven);
+  REG Register(SW, BTN, CLK, sevenSegCLK, regw, dr, sr1, sr2, reg_in, readreg1, readreg2, AN, seven);
 
   initial begin
 	pc = 0;
@@ -249,6 +254,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
       1: begin //decode
         nstate = 3'd2; reg_or_imm = 0; alu_or_mem = 0;
         if (format == J) begin //jump, and finish
+		  op = `opcode;
           if (`opcode == j) begin
             npc = instr[6:0];
             nstate = 3'd0;
@@ -304,12 +310,12 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
             alu_result[7:0] = alu_in_B[31:24];
         end
         else if (opsave == sadd) begin
-            if(alu_in_A + alu_in_B > 4294967295) alu_result = 4294967295;
+            if(alu_in_A + alu_in_B > 32'hffffffff) alu_result = 32'hffffffff;
             else alu_result = alu_in_A + alu_in_B;
         end
         else if (opsave == ssub) begin
-            if(alu_in_A - alu_in_B < 0) alu_result = 0;
-            else alu_result = alu_in_A - alu_in_B;
+            alu_result = alu_in_A - alu_in_B;
+			if(alu_result < 32'd0) alu_result = 32'd0;
         end
         // added for jal
         else if (opsave == jal) begin 
@@ -331,9 +337,9 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
       end
       3: begin //prepare to write to mem
         nstate = 3'd0;
-        if ((format == R)||(`opcode == addi)||(`opcode == andi)||(`opcode == ori)||(`opcode == jal)) regw = 1;
+        if ((format == R)||(`opcode == addi)||(`opcode == andi)||(`opcode == ori)||(`opcode == jal)||(`opcode == lui)) regw = 1;
         // added for mult
-        else if (`opcode == mult) begin
+        else if (`f_code == mult) begin
           regw = 1;
           nstate = 3'd4;
         end
@@ -352,7 +358,7 @@ module MIPS (SW, BTN, CLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
         CS = 1;
         if (`opcode == lw) regw = 1;
         // added for mult
-        else if (`opcode == mult) begin
+        else if (`f_code == mult) begin
           CS = 0;
           regw = 1;
         end
