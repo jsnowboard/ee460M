@@ -8,46 +8,67 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Jeremiah/Programming/EE-460M
-vComplete_MIPS
-Z1 !s110 1492897995
+vbinary_seven
+Z1 !s110 1493332474
 !i10b 1
-!s100 Hi?G0kN=e6BNQcW79QPZc2
-I?Bg1RQD[VPQ0=CGUOPH9U2
+!s100 enXCdlAYQFKK;O<?ZUeeI3
+ISVKZ8A8K_eV3f57kjO:Tf3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Users/Jeremiah/Programming/ee460M
-Z4 w1492897992
+Z4 w1493331262
 Z5 8C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v
 Z6 FC:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v
-L0 1
+L0 443
 Z7 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z8 !s108 1492897995.000000
+Z8 !s108 1493332474.000000
 Z9 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v|
 Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/lab7_b.v|
 !s101 -O0
 !i113 1
 Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
-n@complete_@m@i@p@s
-vDFF
-Z12 !s110 1491445914
+vComplete_MIPS
+Z12 !s110 1493443824
 !i10b 1
-!s100 m=23I[;ReP8iS3zSbCB[K1
-I3nBoo19>nTe[E=giB1G0z0
+!s100 XS9<i327SG?D>M2;R>=VA3
+I?C:Gfem;@3:kW_M7j>`061
 R2
 R3
-Z13 w1490758051
-Z14 8C:/Users/Jeremiah/Programming/ee460M/DFF.v
-Z15 FC:/Users/Jeremiah/Programming/ee460M/DFF.v
+Z13 w1493443816
+Z14 8C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v
+Z15 FC:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v
 L0 1
 R7
 r1
 !s85 0
 31
-Z16 !s108 1491445914.000000
-Z17 !s107 C:/Users/Jeremiah/Programming/ee460M/DFF.v|
-Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/DFF.v|
+Z16 !s108 1493443824.000000
+Z17 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v|
+Z18 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/lab7.v|
+!s101 -O0
+!i113 1
+R11
+n@complete_@m@i@p@s
+vDFF
+Z19 !s110 1491445914
+!i10b 1
+!s100 m=23I[;ReP8iS3zSbCB[K1
+I3nBoo19>nTe[E=giB1G0z0
+R2
+R3
+Z20 w1490758051
+Z21 8C:/Users/Jeremiah/Programming/ee460M/DFF.v
+Z22 FC:/Users/Jeremiah/Programming/ee460M/DFF.v
+L0 1
+R7
+r1
+!s85 0
+31
+Z23 !s108 1491445914.000000
+Z24 !s107 C:/Users/Jeremiah/Programming/ee460M/DFF.v|
+Z25 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/DFF.v|
 !s101 -O0
 !i113 1
 R11
@@ -60,44 +81,44 @@ I4>Z2^`ce]LZ_YX8d3<oO=0
 R2
 R3
 w1490756733
-R14
-R15
-Z19 L0 10
+R21
+R22
+Z26 L0 10
 R7
 r1
 !s85 0
 31
 !s108 1490757602.000000
-R17
-R18
+R24
+R25
 !s101 -O0
 !i113 1
 R11
 n@d@f@f3
 vDFF4
-R12
+R19
 !i10b 1
 !s100 ]]7VNEkn`XcEaW@3oV`fA1
 IG2hecReZSPDk@:R^kM@ZL0
 R2
 R3
-R13
-R14
-R15
-R19
+R20
+R21
+R22
+R26
 R7
 r1
 !s85 0
 31
-R16
-R17
-R18
+R23
+R24
+R25
 !s101 -O0
 !i113 1
 R11
 n@d@f@f4
 vHexTo7Segment
-Z20 !s110 1491445915
+Z27 !s110 1491445915
 !i10b 1
 !s100 LIodY];^2:>ZM@BbU1QBm0
 ISQ<LZP6h`6Hh9??_@j>:J3
@@ -111,7 +132,7 @@ R7
 r1
 !s85 0
 31
-R16
+R23
 !s107 C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Hexto7Segment.v|
 !s101 -O0
@@ -141,13 +162,13 @@ r1
 R11
 n@lab4@b@c@d@to7@segment
 vLab4BinaryToBCD
-Z21 !s110 1488599155
+Z28 !s110 1488599155
 !i10b 1
 !s100 W<0H[_Y<L`[[LWMCH@biZ3
 IY;8B7E`:`Ndj@^k]3kA2k3
 R2
 R0
-Z22 w1488497909
+Z29 w1488497909
 8C:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v
 FC:/Users/Jeremiah/Programming/EE-460M/Lab4BinaryToBCD.v
 L0 1
@@ -163,7 +184,7 @@ r1
 R11
 n@lab4@binary@to@b@c@d
 vLab4clock
-R12
+R19
 !i10b 1
 !s100 bl`IJ>]Fl;:ZKIamBNNiR3
 I9MROS?BXiTjij:[UeB@f>0
@@ -177,7 +198,7 @@ R7
 r1
 !s85 0
 31
-R16
+R23
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab4clock.v|
 !s101 -O0
@@ -185,13 +206,13 @@ R16
 R11
 n@lab4clock
 vLab4counter
-R21
+R28
 !i10b 1
 !s100 FkHmE:`<ddEj<3IkQ>NaF3
 Ig6kz1@]_z@PGn2coleYZS3
 R2
 R0
-Z23 w1488596316
+Z30 w1488596316
 8C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v
 FC:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v
 L0 1
@@ -199,7 +220,7 @@ R7
 r1
 !s85 0
 31
-Z24 !s108 1488599155.000000
+Z31 !s108 1488599155.000000
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4counter.v|
 !s101 -O0
@@ -207,35 +228,35 @@ Z24 !s108 1488599155.000000
 R11
 n@lab4counter
 vLab4Debouncer
-Z25 !s110 1488599156
+Z32 !s110 1488599156
 !i10b 1
 !s100 d9VZOC1bhXY^3eICHD5mF1
 I0kdHm@d]DK]kR`=oh]^eS0
 R2
 R0
-R22
-Z26 8C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
-Z27 FC:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
-R19
+R29
+Z33 8C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
+Z34 FC:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v
+R26
 R7
 r1
 !s85 0
 31
-R24
-Z28 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
-Z29 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
+R31
+Z35 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
+Z36 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4Debouncer.v|
 !s101 -O0
 !i113 1
 R11
 n@lab4@debouncer
 vLab4decrementer
-R21
+R28
 !i10b 1
 !s100 :=BTf;11Y;2BkDZEHmZ0K0
 Ifne^m^SAbjZB4kJj0<gSC3
 R2
 R0
-R23
+R30
 8C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v
 FC:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v
 L0 1
@@ -243,7 +264,7 @@ R7
 r1
 !s85 0
 31
-R24
+R31
 !s107 C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/EE-460M/Lab4decrementer.v|
 !s101 -O0
@@ -251,23 +272,23 @@ R24
 R11
 n@lab4decrementer
 vLab4DFF
-R25
+R32
 !i10b 1
 !s100 [RoB@cH94Oz]K4eAN<T:X0
 I73`0gI[3X=SQ7lj>5e_9F3
 R2
 R0
-R22
-R26
-R27
+R29
+R33
+R34
 L0 1
 R7
 r1
 !s85 0
 31
-R24
-R28
-R29
+R31
+R35
+R36
 !s101 -O0
 !i113 1
 R11
@@ -295,7 +316,7 @@ r1
 R11
 n@lab4@flasher
 vLab4parkingMeterTop
-R25
+R32
 !i10b 1
 !s100 9WfO`mGOM4B9k:jX8_;Jf0
 IT>5;^XTC^ZkXI^jm3TAWd1
@@ -317,7 +338,7 @@ r1
 R11
 n@lab4parking@meter@top
 vLab5_GameController
-R20
+R27
 !i10b 1
 !s100 A4WTHAS:cogbZWBOzbhz02
 Ie7m]L__YTSAJAne2BAegb1
@@ -331,7 +352,7 @@ R7
 r1
 !s85 0
 31
-Z30 !s108 1491445915.000000
+Z37 !s108 1491445915.000000
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab5_GameController.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab5_GameController.v|
 !s101 -O0
@@ -339,7 +360,7 @@ Z30 !s108 1491445915.000000
 R11
 n@lab5_@game@controller
 vLab5_Keyboard
-R12
+R19
 !i10b 1
 !s100 cDzY=k4AjJI`g5@dlRf[C2
 IH`1c2Obgbmz8DXY00CHfk3
@@ -353,7 +374,7 @@ R7
 r1
 !s85 0
 31
-R16
+R23
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab5_Keyboard.v|
 !s101 -O0
@@ -383,7 +404,7 @@ r1
 R11
 n@lab5_@keyboard_v2
 vLab5_PartA
-R12
+R19
 !i10b 1
 !s100 ZS1>0jnHm2zXfX6P1PaJX3
 IO74:lF5T3=1AV[CckOO<;1
@@ -397,7 +418,7 @@ R7
 r1
 !s85 0
 31
-R16
+R23
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab5_PartA.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab5_PartA.v|
 !s101 -O0
@@ -405,7 +426,7 @@ R16
 R11
 n@lab5_@part@a
 vLab5_Snake
-R12
+R19
 !i10b 1
 !s100 3i1Jh`0^[gX4Z6L^KgGDF2
 I:f0gg6G7JU2MM;@k^d7hF3
@@ -419,7 +440,7 @@ R7
 r1
 !s85 0
 31
-R16
+R23
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab5_Snake.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab5_Snake.v|
 !s101 -O0
@@ -427,7 +448,7 @@ R16
 R11
 n@lab5_@snake
 vLab5_VGAcontroller
-R20
+R27
 !i10b 1
 !s100 maNLgb4aGEmfnzQjkH8Rm3
 Il^;FL>cAjn[lba59nVhNH1
@@ -441,7 +462,7 @@ R7
 r1
 !s85 0
 31
-R30
+R37
 !s107 C:/Users/Jeremiah/Programming/ee460M/Lab5_VGAcontroller_C.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/Lab5_VGAcontroller_C.v|
 !s101 -O0
@@ -449,103 +470,125 @@ R30
 R11
 n@lab5_@v@g@acontroller
 vMemory
-R1
+R12
 !i10b 1
-!s100 9fc7`Nbgf;Ja71bc:>_Yg1
-I`f`BN`6n`n;h:df`0JTLJ3
+!s100 =D6>KZ]aL21g44QF;1:fW0
+I2R8_I1a9a=ZDBS?8?;SY`0
 R2
 R3
-R4
-R5
-R6
-L0 22
+R13
+R14
+R15
+L0 27
 R7
 r1
 !s85 0
 31
-R8
-R9
-R10
+R16
+R17
+R18
 !s101 -O0
 !i113 1
 R11
 n@memory
 vMIPS
-R1
+R12
 !i10b 1
-!s100 Bm1@=<O2Rc?hlBiE35QM]2
-I4hY[^QJaAReO=el_dl7_A3
+!s100 ]1hYM8AgW6B7ZhU2Q18YW1
+IgXdgSnQR3FmPK^Y1n>XIe2
 R2
 R3
-R4
-R5
-R6
-L0 99
+R13
+R14
+R15
+L0 109
 R7
 r1
 !s85 0
 31
-R8
-R9
-R10
+R16
+R17
+R18
 !s101 -O0
 !i113 1
 R11
 n@m@i@p@s
 vMIPS_Testbench
-Z31 !s110 1492889186
+R12
 !i10b 1
 !s100 8MY:^=RMmZ>UOH<fB2ORg2
 IQcB83z0=G:::IXPAHlzaB0
 R2
 R3
-Z32 w1492889184
-Z33 8C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v
-Z34 FC:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v
+Z38 w1493443586
+Z39 8C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v
+Z40 FC:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v
 L0 2
 R7
 r1
 !s85 0
 31
-Z35 !s108 1492889186.000000
-Z36 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v|
-Z37 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v|
+R16
+Z41 !s107 C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v|
+Z42 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jeremiah/Programming/ee460M/lab7/MIPS_Testbench.v|
 !s101 -O0
 !i113 1
 R11
 n@m@i@p@s_@testbench
 vmips_testbench2
-R31
+R12
 !i10b 1
-!s100 djTfncR@j7FzP8NRf98Ki1
-IUA5ZF??d`[Y1CWILzbm0]3
+!s100 ^3R@3<Gke]e:MaW5<e;7P0
+IX[4PT3[>GEQ^f=QWH:bnZ0
 R2
 R3
-R32
-R33
-R34
+R38
+R39
+R40
 L0 45
 R7
 r1
 !s85 0
 31
-R35
-R36
-R37
+R16
+R41
+R42
 !s101 -O0
 !i113 1
 R11
 vREG
+R12
+!i10b 1
+!s100 ]_Wgz]LEG?1?8dLanc:c31
+IQQT?NPMT;3<J4<RWO80@z0
+R2
+R3
+R13
+R14
+R15
+L0 62
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+!i113 1
+R11
+n@r@e@g
+vSevenSeg_Display
 R1
 !i10b 1
-!s100 h?Icacg[4f_[AjRk7WDoF2
-I2W2B3aQTDEKk_g3TOTGTI0
+!s100 VEmZeji8eD2;Z_Y9@dOlY3
+IAmdZ6Dj2LZeoo11iDbbe72
 R2
 R3
 R4
 R5
 R6
-L0 57
+L0 390
 R7
 r1
 !s85 0
@@ -556,4 +599,4 @@ R10
 !s101 -O0
 !i113 1
 R11
-n@r@e@g
+n@seven@seg_@display

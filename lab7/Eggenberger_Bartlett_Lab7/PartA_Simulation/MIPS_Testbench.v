@@ -54,11 +54,10 @@ module mips_testbench2;
   reg[6:0] AddressTB;
   wire WE_Mux, CS_Mux;
   reg init, rst, WE_TB, CS_TB;
-  wire[7:0] regout1;
 
   integer i;
 
-  MIPS CPU(CLK, rst, CS, WE, Address, Mem_Bus_Wire, regout1);
+  MIPS CPU(CLK, rst, CS, WE, Address, Mem_Bus_Wire);
   Memory MEM(CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Bus_Wire);
 
   assign Address_Mux = (init)? AddressTB : Address;

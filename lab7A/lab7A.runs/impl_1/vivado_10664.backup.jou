@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Apr 29 00:12:18 2017
+# Process ID: 10664
+# Current directory: C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1
+# Command line: vivado.exe -log Complete_MIPS.vdi -applog -messageDb vivado.pb -mode batch -source Complete_MIPS.tcl -notrace
+# Log file: C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/Complete_MIPS.vdi
+# Journal file: C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Complete_MIPS.tcl -notrace
