@@ -1,10 +1,9 @@
-module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out, AN, seven);
+module Complete_MIPS(SW, BTN, CLK, RST, AN, seven);
   // Will need to be modified to add functionality
   input CLK;
   input RST;
   input [1:0] BTN;
   input [2:0] SW;
-  output A_Out, D_Out;
   output [3:0] AN;
   output [7:1] seven;
 
@@ -13,8 +12,8 @@ module Complete_MIPS(SW, BTN, CLK, RST, A_Out, D_Out, AN, seven);
   wire [31:0] Mem_Bus;
   wire sevenSegCLK,slowCLK;
 
-  MIPS CPU(SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
-  Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
+  MIPS CPU(SW, BTN, slowCLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
+  Memory MEM(CS, WE, slowCLK, ADDR, Mem_Bus);
   clockDivider C(28'd2500000, CLK, slowCLK);
   clockDivider C2(28'd250000, CLK, sevenSegCLK);
 
@@ -189,6 +188,7 @@ module MIPS (SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   reg [31:0] instr, alu_result;
   reg [6:0] pc, npc;
   wire [31:0] imm_ext, alu_in_A, alu_in_B, reg_in, readreg1, readreg2;
+  reg [32:0] sat;
   reg [31:0] alu_result_save;
   reg alu_or_mem, alu_or_mem_save, regw, writing, reg_or_imm, reg_or_imm_save;
   reg fetchDorI;
@@ -245,7 +245,7 @@ module MIPS (SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
   begin
     fetchDorI = 0; CS = 0; WE = 0; regw = 0; writing = 0; alu_result = 32'd0;
     npc = pc; op = jr; reg_or_imm = 0; alu_or_mem = 0; nstate = 3'd0; mlo = 32'd0;
-    mhi = 32'd0;
+    mhi = 32'd0; sat = 33'd0;
     case (state)
       0: begin //fetch
         npc = pc + 7'd1; CS = 1; nstate = 3'd1;
@@ -310,12 +310,14 @@ module MIPS (SW, BTN, CLK, sevenSegCLK, RST, CS, WE, ADDR, Mem_Bus, AN, seven);
             alu_result[7:0] = alu_in_B[31:24];
         end
         else if (opsave == sadd) begin
-            if(alu_in_A + alu_in_B > 32'hffffffff) alu_result = 32'hffffffff;
-            else alu_result = alu_in_A + alu_in_B;
+            sat = alu_in_A + alu_in_B;
+            if(sat > 33'hffffffff) alu_result = 32'hffffffff;
+            else alu_result = sat[31:0];
         end
         else if (opsave == ssub) begin
-            alu_result = alu_in_A - alu_in_B;
-			if(alu_result < 32'd0) alu_result = 32'd0;
+            sat = alu_in_A - alu_in_B;
+            if(sat[32]) alu_result = 0;
+            else alu_result = sat[31:0];
         end
         // added for jal
         else if (opsave == jal) begin 
