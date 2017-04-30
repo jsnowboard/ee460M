@@ -12,9 +12,9 @@ module Complete_MIPS(CLK, RST, HALT, led, A_Out, D_Out);
   wire slowClk;
 // introduce HALT instruction
 // set slow clk
-  clockDivider slow(1000000, CLK, slowClk);
-  MIPS CPU(CLK, RST, CS, WE, ADDR, Mem_Bus, led);
-  Memory MEM(CS, WE, CLK, ADDR, Mem_Bus);
+  clockDivider slow(5000000, CLK, slowClk);
+  MIPS CPU(slowClk, RST, CS, WE, ADDR, Mem_Bus, led, HALT);
+  Memory MEM(CS, WE, slowClk, ADDR, Mem_Bus);
 
 endmodule
 
@@ -106,8 +106,8 @@ endmodule
 `define f_code instr[5:0]
 `define numshift instr[10:6]
 
-module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus, regout1);
-  input CLK, RST;
+module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus, regout1, HALT);
+  input CLK, RST, HALT;
   output reg CS, WE;
   output [6:0] ADDR;
   inout [31:0] Mem_Bus;
@@ -254,6 +254,10 @@ module MIPS (CLK, RST, CS, WE, ADDR, Mem_Bus, regout1);
     if (RST) begin
       state <= 3'd0;
       pc <= 7'd0;
+    end
+    else if (HALT) begin
+      state <= state;
+      pc <= pc;
     end
     else begin
       state <= nstate;
