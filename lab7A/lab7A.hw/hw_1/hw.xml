@@ -8,7 +8,7 @@
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/Complete_MIPS.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Users/Jeremiah/Programming/ee460M/lab7/Eggenberger_Bartlett_Lab7/PartB/Complete_MIPS.bit"/>
     </Object>
   </ObjectList>
   <probeset name="hw project" active="false"/>
