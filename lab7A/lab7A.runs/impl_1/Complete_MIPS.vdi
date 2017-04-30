@@ -2,8 +2,8 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Sat Apr 29 22:44:59 2017
-# Process ID: 12032
+# Start of session at: Sat Apr 29 22:50:19 2017
+# Process ID: 11824
 # Current directory: C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1
 # Command line: vivado.exe -log Complete_MIPS.vdi -applog -messageDb vivado.pb -mode batch -source Complete_MIPS.tcl -notrace
 # Log file: C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/Complete_MIPS.vdi
@@ -17,19 +17,19 @@ WARNING: [Netlist 29-101] Netlist 'Complete_MIPS' is not ideal for floorplanning
 INFO: [Project 1-479] Netlist was created with Vivado 2015.4
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/.Xil/Vivado-12032-/dcp/Complete_MIPS.xdc]
-Finished Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/.Xil/Vivado-12032-/dcp/Complete_MIPS.xdc]
+Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/.Xil/Vivado-11824-/dcp/Complete_MIPS.xdc]
+Finished Parsing XDC File [C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/.Xil/Vivado-11824-/dcp/Complete_MIPS.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.310 . Memory (MB): peak = 438.352 ; gain = 0.016
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.311 . Memory (MB): peak = 438.352 ; gain = 0.016
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 438.227 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.299 . Memory (MB): peak = 438.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2015.4 (64-bit) build 1412921
-open_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 438.352 ; gain = 250.102
+open_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 438.227 ; gain = 250.648
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-1223] The version limit for your license is '2017.02' and will expire in -60 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
@@ -55,8 +55,7 @@ Creating bitstream...
 Writing bitstream ./Complete_MIPS.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] 'C:/Users/Jeremiah/Programming/ee460M/lab7A/lab7A.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Apr 29 22:45:34 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 783.004 ; gain = 344.652
+write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 783.004 ; gain = 344.777
 INFO: [Vivado_Tcl 4-395] Unable to parse hwdef file Complete_MIPS.hwdef
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 29 22:45:34 2017...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 29 22:50:55 2017...
